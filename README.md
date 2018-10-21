@@ -17,6 +17,12 @@ Ingredient: its simple but the user and the recipes will use this in them
 Recipe: this will be made up of an ingredient list, instructions, a description of the food, title, maybe a picture or two, and maybe the nutrition facts.
 At the moment this is all we think we'll need.
 
+## Wireframe
+
+For the wire frame we used Adobe XD:
+https://xd.adobe.com/view/a4b6a4d6-fd42-4026-698e-25a6af47052c-d287/
+It gives a general idea of how we are going to lay things out.
+
 
 ## User Stories
 
