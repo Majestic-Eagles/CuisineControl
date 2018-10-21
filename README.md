@@ -13,9 +13,30 @@ We'll probably be using an api called **Edamam** for searching food recipes. We 
 
  The models we will probably use are:
 User: to store basic user info and the ingredients they have.
-Ingredient: its simple but the user and the recipes will use this in them
-Recipe: this will be made up of an ingredient list, instructions, a description of the food, title, maybe a picture or two, and maybe the nutrition facts.
-At the moment this is all we think we'll need.
+Food:
+Class Food
+ * Name
+ * Serving size
+ * Calories
+ * Protein
+ * Fat
+ * Carbohyrdates
+ * IsPresent (A boolean variable that says whether or not a person has it)
+ * 
+Recipe:
+Class Recipe
+* Ingredients (An array of Food objects)
+* Name
+* Description
+* FoodImage
+* Calories 
+* Protein
+* Fat
+* Carbohydrates
+* Instructions (Likely a string containing the instructions that the user will read to prepare the recipe)
+* IsAvailable (Whether or not the user has the foods necessary to prepare the recipe)
+* IsMissing (An array of food objects that the user needs to finish the recipe)
+* CookTime
 
 ## Wireframe
 
