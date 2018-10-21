@@ -11,7 +11,8 @@ Our parse server will be able to hold users, which will have a username, passwor
 **Api's**
 We'll probably be using an api called **Edamam** for searching food recipes. We choice this becuase it's free to use and they have a large data base of recipes.
 
- The models we will probably use are
+The models we will probably use are:
+
 User: to store basic user info and the ingredients they have.
 
 Food:
