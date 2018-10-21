@@ -4,6 +4,18 @@
 
 Time spent: **1** hours spent in total
 
+## Parse and Api's
+**Parse**
+Our parse server will be able to hold users, which will have a username, password, then maybe a pointer to a list of recipes they liked. Not sure if a list is the most efficient but it will get the job done. We're thinking that will also need a pointer to the ingreidients that user has.
+**Api's**
+We'll probably be using an api called **Edamam** for searching food recipes. We choice this becuase it's free to use and they have a large data base of recipes.
+ The models we will probably use are:
+User: to store basic user info and the ingredients they have.
+Ingredient: its simple but the user and the recipes will use this in them
+Recipe: this will be made up of an ingredient list, instructions, a description of the food, title, maybe a picture or two, and maybe the nutrition facts.
+At the moment this is all we think we'll need.
+
+
 ## User Stories
 
 The following **required** functionality is completed:
