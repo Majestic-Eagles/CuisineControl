@@ -13,6 +13,7 @@ We'll probably be using an api called **Edamam** for searching food recipes. We 
 
  The models we will probably use are
 User: to store basic user info and the ingredients they have.
+
 Food:
 Class Food
  * Name
@@ -22,6 +23,7 @@ Class Food
  * Fat
  * Carbohyrdates
  * IsPresent (A boolean variable that says whether or not a person has it)
+ 
 Recipe:
 Class Recipe
 * Ingredients (An array of Food objects)
