@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73BF4D9D2181147A00561447 /* EdamamAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4D9C2181147A00561447 /* EdamamAPIManager.swift */; };
+		73BF4D9F218114C200561447 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4D9E218114C200561447 /* Food.swift */; };
+		73BF4DA1218114D400561447 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4DA0218114D400561447 /* Recipe.swift */; };
 		73DF7142216BD9CC002DE93A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF7141216BD9CC002DE93A /* AppDelegate.swift */; };
 		73DF7144216BD9CC002DE93A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF7143216BD9CC002DE93A /* ViewController.swift */; };
 		73DF7147216BD9CC002DE93A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DF7145216BD9CC002DE93A /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73BF4D9C2181147A00561447 /* EdamamAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamAPIManager.swift; sourceTree = "<group>"; };
+		73BF4D9E218114C200561447 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		73BF4DA0218114D400561447 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		73DF713E216BD9CC002DE93A /* CuisineControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuisineControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DF7141216BD9CC002DE93A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DF7143216BD9CC002DE93A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		734365EE2181139C004153F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				73DF7143216BD9CC002DE93A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		734365EF218113B4004153F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73BF4D9E218114C200561447 /* Food.swift */,
+				73BF4DA0218114D400561447 /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		73BF4D9B2181142F00561447 /* APIManagers */ = {
+			isa = PBXGroup;
+			children = (
+				73BF4D9C2181147A00561447 /* EdamamAPIManager.swift */,
+			);
+			path = APIManagers;
+			sourceTree = "<group>";
+		};
 		73DF7135216BD9CC002DE93A = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +108,10 @@
 		73DF7140216BD9CC002DE93A /* CuisineControl */ = {
 			isa = PBXGroup;
 			children = (
+				73BF4D9B2181142F00561447 /* APIManagers */,
+				734365EF218113B4004153F7 /* Models */,
+				734365EE2181139C004153F7 /* Controllers */,
 				73DF7141216BD9CC002DE93A /* AppDelegate.swift */,
-				73DF7143216BD9CC002DE93A /* ViewController.swift */,
 				73DF7145216BD9CC002DE93A /* Main.storyboard */,
 				73DF7148216BD9CD002DE93A /* Assets.xcassets */,
 				73DF714A216BD9CD002DE93A /* LaunchScreen.storyboard */,
@@ -197,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BF4D9D2181147A00561447 /* EdamamAPIManager.swift in Sources */,
+				73BF4D9F218114C200561447 /* Food.swift in Sources */,
 				73DF7144216BD9CC002DE93A /* ViewController.swift in Sources */,
 				73DF7142216BD9CC002DE93A /* AppDelegate.swift in Sources */,
+				73BF4DA1218114D400561447 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
