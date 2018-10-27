@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        EdamamAPIManager.shared.getFoodData(foodString: "chicken")
+        EdamamAPIManager.shared.getFoodData(foodString: "zone fudge gram protein bar")
         
     }
 

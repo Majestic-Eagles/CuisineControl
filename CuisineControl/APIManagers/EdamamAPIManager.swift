@@ -18,7 +18,7 @@ class EdamamAPIManager {
     let appKey = "&app_key="
     let baseURLString = "https://api.edamam.com/"
     let searchString = "search?q=chicken&app_id=832f958b&app_key=e8cf23abb1138f67a8fcee3299fb2f56"
-    let foodDatabaseStringBase = "food-database/parser?ingr="
+    let foodDatabaseStringBase = "api/food-database/parser?ingr="
     var session: URLSession
     static var shared: EdamamAPIManager = EdamamAPIManager()
     
@@ -31,14 +31,12 @@ class EdamamAPIManager {
         var otherFoodString = foodString
         
         otherFoodString = foodString.replacingOccurrences(of: " ", with: "%20")
-        print(otherFoodString)
         
         if let url = URL(string: baseURLString + foodDatabaseStringBase + otherFoodString + appID + foodDatabaseApplicationID + appKey + foodDatabaseApplicationKey) {
             let request = URLRequest(url: url)
             let task = session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
                     let dictionary = try! JSONSerialization.jsonObject(with: data, options: [])
-                    print(dictionary)
                 } else {
                     print(error?.localizedDescription)
                 }
