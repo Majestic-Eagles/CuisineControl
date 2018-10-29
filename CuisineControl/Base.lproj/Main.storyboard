@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,12 +64,79 @@
                     <connections>
                         <outlet property="passwordField" destination="MBu-G1-blQ" id="FnX-LE-GeM"/>
                         <outlet property="usernameField" destination="aUH-S2-tu1" id="08l-fD-mZf"/>
-                        <segue destination="7M6-Nh-Kgt" kind="presentation" identifier="loginSegue" id="hgT-07-xrv"/>
+                        <segue destination="dlL-we-PVU" kind="presentation" identifier="loginSegue" id="hgT-07-xrv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Bar Code Scanner View Controller-->
+        <scene sceneID="nYE-dy-fDc">
+            <objects>
+                <viewController id="Pay-YM-yZe" customClass="BarCodeScannerViewController" customModule="CuisineControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="83f-kW-RD8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyj-Ar-EbD">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GVW-Tj-xy5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vv-qR-CqY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg5-Kn-mEL">
+                                        <rect key="frame" x="165.5" y="38" width="44" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUd-iZ-gJk">
+                                        <rect key="frame" x="15" y="39" width="64" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="HOe-cz-cyw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="Zmu-Wn-ntm"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Cancel" image="cross"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7YZ-lk-A5M"/>
+                                    <constraint firstItem="YUd-iZ-gJk" firstAttribute="leading" secondItem="9Vv-qR-CqY" secondAttribute="leading" constant="15" id="8y7-Lx-ss6"/>
+                                    <constraint firstItem="mg5-Kn-mEL" firstAttribute="centerX" secondItem="9Vv-qR-CqY" secondAttribute="centerX" id="FJa-7S-yhT"/>
+                                    <constraint firstAttribute="bottom" secondItem="mg5-Kn-mEL" secondAttribute="bottom" constant="8" id="I3v-8f-BD2"/>
+                                    <constraint firstAttribute="bottom" secondItem="YUd-iZ-gJk" secondAttribute="bottom" constant="13" id="jdj-xk-ykd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dyj-Ar-EbD" firstAttribute="bottom" secondItem="4Ma-ui-eGH" secondAttribute="bottom" id="6KR-AE-gt7"/>
+                            <constraint firstItem="9Vv-qR-CqY" firstAttribute="trailing" secondItem="4Ma-ui-eGH" secondAttribute="trailing" id="Nw2-m0-146"/>
+                            <constraint firstItem="dyj-Ar-EbD" firstAttribute="trailing" secondItem="4Ma-ui-eGH" secondAttribute="trailing" id="Z3z-rf-d5i"/>
+                            <constraint firstItem="9Vv-qR-CqY" firstAttribute="leading" secondItem="4Ma-ui-eGH" secondAttribute="leading" id="mJg-Fs-sYU"/>
+                            <constraint firstItem="dyj-Ar-EbD" firstAttribute="leading" secondItem="4Ma-ui-eGH" secondAttribute="leading" id="nFh-Lz-U3W"/>
+                            <constraint firstItem="9Vv-qR-CqY" firstAttribute="top" secondItem="83f-kW-RD8" secondAttribute="top" id="qAd-p8-Tak"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Ma-ui-eGH"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="dyj-Ar-EbD" id="o0X-Me-B9c"/>
+                        <outlet property="topBar" destination="9Vv-qR-CqY" id="SIT-h3-Cha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLi-JW-6um" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="-562"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="JEE-xG-agS">
@@ -78,6 +145,16 @@
                     <view key="view" contentMode="scaleToFill" id="hGV-VF-sxS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8P-Eh-Mhp">
+                                <rect key="frame" x="137" y="318" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan new item"/>
+                                <connections>
+                                    <action selector="scanNewItem:" destination="rzz-NA-VtP" eventType="touchUpInside" id="EbK-kV-aP5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="l3f-og-kWC"/>
                     </view>
@@ -90,16 +167,18 @@
                     </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="mE6-Ti-8Ra"/>
+                        <segue destination="Pay-YM-yZe" kind="presentation" identifier="ScannerSegue" id="xX5-u7-Gcx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw3-nu-70B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266.4000000000001" y="117.39130434782609"/>
+            <point key="canvasLocation" x="3205.5999999999999" y="117.39130434782609"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="gTW-m0-ffV">
             <objects>
                 <navigationController storyboardIdentifier="MainNavView" automaticallyAdjustsScrollViewInsets="NO" id="7M6-Nh-Kgt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kju-yC-Jth"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="34p-oN-TGn">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -112,7 +191,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDw-NB-4Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2264.8000000000002" y="116.49175412293854"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9Cd-Ci-kf3">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dlL-we-PVU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9ba-lN-Pjq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7M6-Nh-Kgt" kind="relationship" relationship="viewControllers" id="jBx-2d-Kps"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHs-RT-PrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="1325.5999999999999" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cross" width="16" height="16"/>
+    </resources>
 </document>
