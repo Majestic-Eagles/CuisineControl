@@ -87,7 +87,7 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
+            //messageLabel.text = "No QR code is detected"
             return
         }
         
