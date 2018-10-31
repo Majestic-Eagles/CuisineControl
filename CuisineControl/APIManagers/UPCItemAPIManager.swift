@@ -26,10 +26,10 @@ class UPCItemAPIManager {
             let task = session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
                     let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    let dataDictionary = dictionary["items"]
-                    print(dictionary)
-                    print(dictionary["items"])
-                    //let dataDictionary = dictionary["items"] as! [String: Any]
+                    let itemInfoArray = dictionary["items"] as! NSArray
+                    let itemInfoDictionary = itemInfoArray[0] as! [String: Any]
+                    print(itemInfoDictionary["title"]!)
+                    EdamamAPIManager.shared.getFoodData(foodString: itemInfoDictionary["title"] as! String)
                 } else {
                     print(error?.localizedDescription)
                 }

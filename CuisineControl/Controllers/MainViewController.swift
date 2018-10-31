@@ -14,8 +14,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let upc = "096619756803"
-        print("hi")
+        let upc = "010700540034"
         UPCItemAPIManager.shared.getUPC(UPC: upc)
         
     }
