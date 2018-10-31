@@ -13,8 +13,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let upc = "096619756803"
+        print("hi")
+        UPCItemAPIManager.shared.getUPC(UPC: upc)
+        
     }
 
     override func didReceiveMemoryWarning() {
