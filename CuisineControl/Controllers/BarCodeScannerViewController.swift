@@ -101,6 +101,7 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                
             }
         }
     }

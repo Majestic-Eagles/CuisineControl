@@ -37,6 +37,7 @@ class EdamamAPIManager {
             let task = session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
                     let dictionary = try! JSONSerialization.jsonObject(with: data, options: [])
+                    print(dictionary)
                 } else {
                     print(error?.localizedDescription)
                 }
