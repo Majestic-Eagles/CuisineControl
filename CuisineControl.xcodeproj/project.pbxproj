@@ -20,6 +20,7 @@
 		73DF714C216BD9CD002DE93A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DF714A216BD9CD002DE93A /* LaunchScreen.storyboard */; };
 		73DF7157216BD9CD002DE93A /* CuisineControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF7156216BD9CD002DE93A /* CuisineControlUITests.swift */; };
 		AA4D406421857E7F00057DFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D406321857E7F00057DFF /* MainViewController.swift */; };
+		AA4D40A0218A4EF500057DFF /* tabBarCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D409F218A4EF500057DFF /* tabBarCon.swift */; };
 		BA355CBB14A746006CD61974 /* Pods_CuisineControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E391E9EABD67EA07EA9234 /* Pods_CuisineControl.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		73DF7156216BD9CD002DE93A /* CuisineControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineControlUITests.swift; sourceTree = "<group>"; };
 		73DF7158216BD9CD002DE93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA4D406321857E7F00057DFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AA4D409F218A4EF500057DFF /* tabBarCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarCon.swift; sourceTree = "<group>"; };
 		E8C9CD1F573CA535D0FDF90F /* Pods-CuisineControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuisineControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuisineControl/Pods-CuisineControl.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E391E9EABD67EA07EA9234 /* Pods_CuisineControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuisineControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				73DF7143216BD9CC002DE93A /* LoginViewController.swift */,
 				73419A5D218780E6006AED06 /* BarCodeScannerViewController.swift */,
 				AA4D406321857E7F00057DFF /* MainViewController.swift */,
+				AA4D409F218A4EF500057DFF /* tabBarCon.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				73BF4D9D2181147A00561447 /* EdamamAPIManager.swift in Sources */,
 				73BF4D9F218114C200561447 /* Food.swift in Sources */,
 				73DF7144216BD9CC002DE93A /* LoginViewController.swift in Sources */,
+				AA4D40A0218A4EF500057DFF /* tabBarCon.swift in Sources */,
 				AA4D406421857E7F00057DFF /* MainViewController.swift in Sources */,
 				73419A5E218780E6006AED06 /* BarCodeScannerViewController.swift in Sources */,
 				73DF7142216BD9CC002DE93A /* AppDelegate.swift in Sources */,
