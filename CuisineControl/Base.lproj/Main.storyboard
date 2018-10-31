@@ -158,7 +158,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="l3f-og-kWC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recipe" selectedImage="icons8-restaurant-menu-30" id="K2M-tz-2dS"/>
+                    <tabBarItem key="tabBarItem" title="Recipe" image="icons8-restaurant-menu-30" id="K2M-tz-2dS"/>
                     <navigationItem key="navigationItem" id="OpZ-8I-yHL">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="kuV-8h-TMb">
                             <connections>
@@ -204,7 +204,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xKG-ge-cOR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Food" selectedImage="icons8-ingredients-30" id="9KE-ej-8qo"/>
+                    <tabBarItem key="tabBarItem" title="My Food" image="icons8-ingredients-30" id="9KE-ej-8qo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
