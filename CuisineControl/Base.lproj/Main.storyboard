@@ -167,7 +167,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="mE6-Ti-8Ra"/>
                         <segue destination="Pay-YM-yZe" kind="presentation" identifier="ScannerSegue" id="xX5-u7-Gcx"/>
                     </connections>
                 </viewController>
@@ -201,21 +200,45 @@
                     <view key="view" contentMode="scaleToFill" id="kBy-lS-blW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-7E-SXQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="88" id="QpZ-Uh-4xB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QpZ-Uh-4xB" id="aj4-fM-sJR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r4b-7E-SXQ" firstAttribute="top" secondItem="xKG-ge-cOR" secondAttribute="top" id="BLw-hb-Pv7"/>
+                            <constraint firstItem="r4b-7E-SXQ" firstAttribute="leading" secondItem="xKG-ge-cOR" secondAttribute="leading" id="I4d-ch-isJ"/>
+                            <constraint firstItem="r4b-7E-SXQ" firstAttribute="trailing" secondItem="xKG-ge-cOR" secondAttribute="trailing" id="Mb0-HP-df4"/>
+                            <constraint firstItem="r4b-7E-SXQ" firstAttribute="bottom" secondItem="xKG-ge-cOR" secondAttribute="bottom" id="fbK-aW-imp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xKG-ge-cOR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Food" image="icons8-ingredients-30" id="9KE-ej-8qo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3166" y="1045"/>
+            <point key="canvasLocation" x="3165.5999999999999" y="1044.8275862068967"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Cuisine Control-->
         <scene sceneID="ukn-vq-4X9">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nhT-Ek-uUV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="QoL-tz-aHO"/>
+                    <navigationItem key="navigationItem" title="Cuisine Control" id="QoL-tz-aHO">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="r7e-wl-R8y"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wj9-3E-nYP">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -223,11 +246,12 @@
                     <connections>
                         <segue destination="rzz-NA-VtP" kind="relationship" relationship="viewControllers" id="DAD-fP-SWF"/>
                         <segue destination="dkS-wy-VrV" kind="relationship" relationship="viewControllers" id="K8G-yz-I3y"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="ktJ-5M-a6H"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRA-Nd-FIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3205.5999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="3206" y="197"/>
         </scene>
     </scenes>
     <resources>
