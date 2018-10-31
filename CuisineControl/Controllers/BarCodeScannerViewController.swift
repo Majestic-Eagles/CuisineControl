@@ -101,7 +101,8 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
-                
+                UPCItemAPIManager.shared.getUPC(UPC: metadataObj.stringValue)
+                self.performSegue(withIdentifier: "FinishedScannerSegue", sender: nil)
             }
         }
     }
