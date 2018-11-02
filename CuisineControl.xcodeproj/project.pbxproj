@@ -10,6 +10,7 @@
 		08A18AF6381A7458A578A699 /* Pods_CuisineControlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB719E61D7326B698F9E6CA /* Pods_CuisineControlUITests.framework */; };
 		73419A5E218780E6006AED06 /* BarCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73419A5D218780E6006AED06 /* BarCodeScannerViewController.swift */; };
 		73419A8E218A0531006AED06 /* UPCItemAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73419A8D218A0531006AED06 /* UPCItemAPIManager.swift */; };
+		73419A90218B981E006AED06 /* SpoonacularAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73419A8F218B981E006AED06 /* SpoonacularAPIManager.swift */; };
 		73BF4D9D2181147A00561447 /* EdamamAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4D9C2181147A00561447 /* EdamamAPIManager.swift */; };
 		73BF4D9F218114C200561447 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4D9E218114C200561447 /* Food.swift */; };
 		73BF4DA1218114D400561447 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4DA0218114D400561447 /* Recipe.swift */; };
@@ -39,6 +40,7 @@
 		1C3A5BEAA7BC4D1A7C8FD478 /* Pods-CuisineControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuisineControlUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuisineControlUITests/Pods-CuisineControlUITests.release.xcconfig"; sourceTree = "<group>"; };
 		73419A5D218780E6006AED06 /* BarCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeScannerViewController.swift; sourceTree = "<group>"; };
 		73419A8D218A0531006AED06 /* UPCItemAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCItemAPIManager.swift; sourceTree = "<group>"; };
+		73419A8F218B981E006AED06 /* SpoonacularAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPIManager.swift; sourceTree = "<group>"; };
 		737908B4C1F53B4CCD31ABC7 /* Pods-CuisineControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuisineControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuisineControl/Pods-CuisineControl.release.xcconfig"; sourceTree = "<group>"; };
 		73BF4D9C2181147A00561447 /* EdamamAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamAPIManager.swift; sourceTree = "<group>"; };
 		73BF4D9E218114C200561447 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				73BF4D9C2181147A00561447 /* EdamamAPIManager.swift */,
+				73419A8F218B981E006AED06 /* SpoonacularAPIManager.swift */,
 				73419A8D218A0531006AED06 /* UPCItemAPIManager.swift */,
 			);
 			path = APIManagers;
@@ -345,6 +348,7 @@
 				73DF7142216BD9CC002DE93A /* AppDelegate.swift in Sources */,
 				73419A8E218A0531006AED06 /* UPCItemAPIManager.swift in Sources */,
 				73BF4DA1218114D400561447 /* Recipe.swift in Sources */,
+				73419A90218B981E006AED06 /* SpoonacularAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

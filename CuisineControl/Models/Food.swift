@@ -19,6 +19,17 @@ class Food {
     var isPresent: Bool?
     var expirationDate: String?
     
-    
+    init(dictionary: [String: Any]) {
+        
+        let nutritionInfoDictionary = dictionary["nutrients"] as! [String: Any]
+        name = dictionary["label"] as? String
+        calories = nutritionInfoDictionary["ENERC_KCAL"] as? Int
+        carbohydrates = nutritionInfoDictionary["CHOCDF"] as? Int
+        protein = nutritionInfoDictionary["PROCNT"] as? Int
+        fat = nutritionInfoDictionary["FAT"] as? Int
+        
+        
+        
+    }
     
 }
