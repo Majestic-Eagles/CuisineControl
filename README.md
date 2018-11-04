@@ -53,9 +53,9 @@ The following **required** functionality is completed:
 - [X] User can sign up and log in
 - [X] User gets an error if account is invalid or taken
 - [X] User persists
-- [ ] User can use the app to scan the barcodes on food
-- [ ] User can store their foods in an online database for the app
-- [ ] User can specify what the foods that are being stored are
+- [X] User can use the app to scan the barcodes on food
+- [X] User can store their foods in an online database for the app
+- [X] User can specify what the foods that are being stored are
 - [ ] User can generate a random recipe
 - [ ] Recipe is generated based on the ingredients the user has
 
@@ -70,6 +70,7 @@ The following **stretch** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='https://image.ibb.co/eJwEfq/cusine-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/lIysgYZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

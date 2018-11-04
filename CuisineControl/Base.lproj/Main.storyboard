@@ -151,53 +151,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDn-w0-g51">
-                                <rect key="frame" x="16" y="124" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDn-w0-g51">
+                                <rect key="frame" x="8" y="81" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-fM-AkH">
-                                <rect key="frame" x="16" y="234" width="299" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter simple name for type of food, i.e., Chicken, Lettuce, Tomatoe Soup" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVV-5W-TMx">
-                                <rect key="frame" x="16" y="39" width="343" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter simple name for type of food, i.e., Chicken, Lettuce, Tomatoe Soup" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVV-5W-TMx">
+                                <rect key="frame" x="8" y="28" width="359" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter expiration date, or leave blank if expiration date is unknown" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Jc-edb">
-                                <rect key="frame" x="16" y="176" width="343" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter expiration date, or leave blank if expiration date is unknown" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Jc-edb">
+                                <rect key="frame" x="8" y="136" width="359" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-T9-CB5">
-                                <rect key="frame" x="323" y="234" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWy-T9-CB5">
+                                <rect key="frame" x="331" y="189" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
                                     <action selector="clearExpirationDate:" destination="gwd-A2-Ztf" eventType="touchUpInside" id="4Gg-qQ-bYj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKu-7z-zJm">
-                                <rect key="frame" x="132" y="356" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKu-7z-zJm">
+                                <rect key="frame" x="132.5" y="269" width="110" height="30"/>
                                 <state key="normal" title="Enter New Food"/>
                                 <connections>
                                     <action selector="createNewFood:" destination="gwd-A2-Ztf" eventType="touchUpInside" id="ybp-9p-6tL"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-fM-AkH">
+                                <rect key="frame" x="8" y="189" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="VVV-5W-TMx" secondAttribute="trailing" constant="8" id="1LI-LR-ktU"/>
+                            <constraint firstItem="VVV-5W-TMx" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="4db-VF-jWI"/>
+                            <constraint firstItem="d0O-fM-AkH" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="5XM-Vj-kBz"/>
+                            <constraint firstItem="VKu-7z-zJm" firstAttribute="top" secondItem="d0O-fM-AkH" secondAttribute="bottom" constant="50" id="621-m6-EEL"/>
+                            <constraint firstItem="VVV-5W-TMx" firstAttribute="top" secondItem="Ws7-cy-E33" secondAttribute="top" constant="8" id="DF3-nv-OHy"/>
+                            <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="eDn-w0-g51" secondAttribute="trailing" constant="8" id="IMh-uS-AJm"/>
+                            <constraint firstItem="eDn-w0-g51" firstAttribute="top" secondItem="VVV-5W-TMx" secondAttribute="bottom" constant="12" id="N1I-Cd-UUn"/>
+                            <constraint firstItem="xWy-T9-CB5" firstAttribute="top" secondItem="hxc-Jc-edb" secondAttribute="bottom" constant="12" id="SVt-XX-ZHe"/>
+                            <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="xWy-T9-CB5" secondAttribute="trailing" constant="8" id="ZgD-2I-HuJ"/>
+                            <constraint firstItem="hxc-Jc-edb" firstAttribute="top" secondItem="eDn-w0-g51" secondAttribute="bottom" constant="25" id="bgw-IX-pz2"/>
+                            <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="hxc-Jc-edb" secondAttribute="trailing" constant="8" id="qmE-eB-jPO"/>
+                            <constraint firstItem="eDn-w0-g51" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="s7c-uB-cE7"/>
+                            <constraint firstItem="xWy-T9-CB5" firstAttribute="leading" secondItem="d0O-fM-AkH" secondAttribute="trailing" constant="8" id="thB-JG-4DN"/>
+                            <constraint firstItem="hxc-Jc-edb" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="v12-OA-fPQ"/>
+                            <constraint firstItem="d0O-fM-AkH" firstAttribute="top" secondItem="hxc-Jc-edb" secondAttribute="bottom" constant="12" id="v3f-0Z-7rF"/>
+                            <constraint firstItem="VKu-7z-zJm" firstAttribute="centerX" secondItem="4ri-0C-NkO" secondAttribute="centerX" id="vfj-FS-WsH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ws7-cy-E33"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="IbK-7K-xfZ" appends="YES" id="UcY-em-pUy"/>
@@ -226,9 +238,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8P-Eh-Mhp">
-                                <rect key="frame" x="137" y="318" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8P-Eh-Mhp">
+                                <rect key="frame" x="137.5" y="318.5" width="100" height="30"/>
                                 <state key="normal" title="Scan new item"/>
                                 <connections>
                                     <action selector="scanNewItem:" destination="rzz-NA-VtP" eventType="touchUpInside" id="EbK-kV-aP5"/>
@@ -236,6 +247,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h8P-Eh-Mhp" firstAttribute="centerX" secondItem="hGV-VF-sxS" secondAttribute="centerX" id="8Ed-Ug-tQJ"/>
+                            <constraint firstItem="h8P-Eh-Mhp" firstAttribute="centerY" secondItem="hGV-VF-sxS" secondAttribute="centerY" id="P9H-a3-oXT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="l3f-og-kWC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipe" image="icons8-restaurant-menu-30" id="K2M-tz-2dS"/>
@@ -345,6 +360,7 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xX5-u7-Gcx"/>
         <segue reference="5Mj-Ux-PJJ"/>
     </inferredMetricsTieBreakers>
 </document>
