@@ -27,7 +27,7 @@ class EdamamAPIManager {
         session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
     }
     
-    func getFoodDataWithUPC(upc: String) {
+    func getFoodDataWithUPC(upc: String, name: String, expirationDate: String) {
         if let url = URL(string: baseURLString + upcFoodDatabaseStringBase + upc + appID + foodDatabaseApplicationID + appKey + foodDatabaseApplicationKey) {
             let request = URLRequest(url: url)
             let task = session.dataTask(with: request) { (data, response, error) in
@@ -36,9 +36,8 @@ class EdamamAPIManager {
                     let hintsArray = dictionary["hints"] as! NSArray
                     let foodLabelDictionary = hintsArray[0] as! [String: Any]
                     let foodDataDictionary = foodLabelDictionary["food"] as! [String: Any]
-                    let newFood = Food(dictionary: foodDataDictionary)
-                    print(newFood.calories)
-                    print(foodDataDictionary)
+                    let newFood = Food(dictionary: foodDataDictionary, name: name, expirationDate: expirationDate)
+                    //print(foodDataDictionary)
                 } else {
                     print(error?.localizedDescription)
                 }

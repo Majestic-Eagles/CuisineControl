@@ -16,6 +16,12 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
+    var upc: String?
+    
+    @IBAction func onCancel(_ sender: Any) {
+        self.performSegue(withIdentifier: "FinishedScannerSegue", sender: nil)
+    }
+    
     
     private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                       AVMetadataObject.ObjectType.code39,
@@ -101,9 +107,18 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                upc = metadataObj.stringValue
                 //EdamamAPIManager.shared.getFoodDataWithUPC(upc: metadataObj.stringValue!)
+                self.performSegue(withIdentifier: "FoodScannedSegue", sender: nil)
                 //self.performSegue(withIdentifier: "FinishedScannerSegue", sender: nil)
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FoodScannedSegue" {
+            let newFoodViewController = segue.destination as! NewFoodViewController
+            newFoodViewController.upc = self.upc
         }
     }
 
