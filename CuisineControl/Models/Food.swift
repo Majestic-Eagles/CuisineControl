@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 
 class Food {
     
@@ -25,18 +26,54 @@ class Food {
         let nutritionInfoDictionary = dictionary["nutrients"] as! [String: Any]
         servingSize = "100 grams"
         apiName = dictionary["label"] as? String
-        calories = nutritionInfoDictionary["ENERC_KCAL"] as? Int
-        carbohydrates = nutritionInfoDictionary["CHOCDF"] as? Int
-        protein = nutritionInfoDictionary["PROCNT"] as? Int
-        fat = nutritionInfoDictionary["FAT"] as? Int
+        if let testCalories = nutritionInfoDictionary["ENERC_KCAL"] as? Int {
+            calories = testCalories
+        } else {
+            calories = 0
+        }
+        print("Carbohydrates: ", nutritionInfoDictionary["CHOCDF"])
+        if let testCarbohydrates = nutritionInfoDictionary["CHOCDF"] as? Int {
+            print(carbohydrates)
+            carbohydrates = testCarbohydrates
+        } else {
+            carbohydrates = 0
+        }
+        if let testProtein = nutritionInfoDictionary["PROCNT"] as? Int {
+            protein = testProtein
+        } else {
+            protein = 0
+        }
+        if let testFat = nutritionInfoDictionary["FAT"] as? Int {
+            fat = testFat
+        } else {
+            fat = 0
+        }
         self.expirationDate = expirationDate
         self.name = name
+        let newFoodObject = PFObject(className: "Foods")
+        newFoodObject["servingSize"] = self.servingSize
+        newFoodObject["apiName"] = self.apiName
+        newFoodObject["calories"] = self.calories
+        newFoodObject["carbohydrates"] = self.carbohydrates
+        newFoodObject["protein"] = self.protein
+        newFoodObject["fat"] = self.fat
+        newFoodObject["expirationDate"] = self.expirationDate
+        newFoodObject["name"] = self.name
+        newFoodObject["user"] = PFUser.current()
+        newFoodObject.saveInBackground { (succes: Bool, error: Error?) in
+            if succes {
+                print("The food was saved")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
         
         print(servingSize)
         print(apiName)
         print(calories)
         print(carbohydrates)
         print(protein)
+        print(fat)
         print(self.expirationDate)
         print(self.name)
         

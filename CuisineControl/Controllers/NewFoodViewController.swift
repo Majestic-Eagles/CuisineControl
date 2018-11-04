@@ -27,6 +27,7 @@ class NewFoodViewController: UIViewController {
     
     @IBAction func createNewFood(_ sender: Any) {
         EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc!, name: foodNameTextField.text!, expirationDate: expirationDateTextField.text!)
+        self.performSegue(withIdentifier: "FoodEnteredSegue", sender: nil)
     }
     
     override func viewDidLoad() {

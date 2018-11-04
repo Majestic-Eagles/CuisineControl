@@ -206,6 +206,7 @@
                     <connections>
                         <outlet property="expirationDateTextField" destination="d0O-fM-AkH" id="Wn8-mc-Din"/>
                         <outlet property="foodNameTextField" destination="eDn-w0-g51" id="Hjn-Gh-5YI"/>
+                        <segue destination="7M6-Nh-Kgt" kind="presentation" identifier="FoodEnteredSegue" id="5Mj-Ux-PJJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3r-Kg-3Cl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,7 +216,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2288.8000000000002" y="-563.56821589205401"/>
+            <point key="canvasLocation" x="2265" y="-563"/>
         </scene>
         <!--Recipe-->
         <scene sceneID="JEE-xG-agS">
@@ -251,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw3-nu-70B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4144.8000000000002" y="117.39130434782609"/>
+            <point key="canvasLocation" x="4370" y="197"/>
         </scene>
         <!--Item-->
         <scene sceneID="gTW-m0-ffV">
@@ -270,7 +271,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDw-NB-4Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264.8000000000002" y="116.49175412293854"/>
+            <point key="canvasLocation" x="2265" y="197"/>
         </scene>
         <!--My Food-->
         <scene sceneID="0LX-Cb-sJ9">
@@ -308,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3165.5999999999999" y="1044.8275862068967"/>
+            <point key="canvasLocation" x="3206" y="983"/>
         </scene>
         <!--Cuisine Control-->
         <scene sceneID="ukn-vq-4X9">
@@ -344,6 +345,6 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qts-iW-URU"/>
+        <segue reference="5Mj-Ux-PJJ"/>
     </inferredMetricsTieBreakers>
 </document>

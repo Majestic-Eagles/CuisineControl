@@ -33,11 +33,16 @@ class EdamamAPIManager {
             let task = session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
                     let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                    if let error = dictionary["error"] {
+                        print(error)
+                        print("Food upc not in database")
+                        return
+                    }
                     let hintsArray = dictionary["hints"] as! NSArray
                     let foodLabelDictionary = hintsArray[0] as! [String: Any]
                     let foodDataDictionary = foodLabelDictionary["food"] as! [String: Any]
+                    print(foodDataDictionary)
                     let newFood = Food(dictionary: foodDataDictionary, name: name, expirationDate: expirationDate)
-                    //print(foodDataDictionary)
                 } else {
                     print(error?.localizedDescription)
                 }
@@ -64,6 +69,11 @@ class EdamamAPIManager {
             }
             task.resume()
         }
+        
+    }
+    
+    func getRandomRecipe() {
+        
         
         
     }
