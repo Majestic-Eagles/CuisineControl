@@ -70,7 +70,7 @@ The following **stretch** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='https://image.ibb.co/eJwEfq/cusine-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://imgur.com/lIysgYZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/q4WQpaP.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
