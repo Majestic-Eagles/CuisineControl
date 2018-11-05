@@ -83,8 +83,10 @@ class EdamamAPIManager {
         
         query.findObjectsInBackground { (foods, error) in
             if let foods = foods {
+                if(foods != []){
                 print("Query success")
                 self.returnedFoods = foods
+                print(foods)
                 let randomIngredientIndex = Int(arc4random_uniform(UInt32(self.returnedFoods!.count)))
                 let randomIngredient = self.returnedFoods![randomIngredientIndex]["name"]
                 let q = "q=\(randomIngredient)"
@@ -100,6 +102,7 @@ class EdamamAPIManager {
                     }
                 }
                 task.resume()
+                }
             } else if let error = error {
                 print(error.localizedDescription)
             }
