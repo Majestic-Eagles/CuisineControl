@@ -27,8 +27,8 @@ class tabBarCon: UITabBarController {
         self.performSegue(withIdentifier: "logoutSegue", sender: nil)
     }
     
-    @IBAction func scanNewFood(_ sender: Any) {
-       
+    @IBAction func scanBar(_ sender: Any) {
+        self.performSegue(withIdentifier: "ScannerSegue", sender: nil)
     }
     
 }
