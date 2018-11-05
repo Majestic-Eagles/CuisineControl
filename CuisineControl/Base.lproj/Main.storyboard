@@ -157,6 +157,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-fM-AkH">
+                                <rect key="frame" x="8" y="189" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter simple name for type of food, i.e., Chicken, Lettuce, Tomatoe Soup" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVV-5W-TMx">
                                 <rect key="frame" x="8" y="28" width="359" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -177,32 +183,47 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKu-7z-zJm">
-                                <rect key="frame" x="132.5" y="269" width="110" height="30"/>
+                                <rect key="frame" x="132.5" y="355" width="110" height="30"/>
                                 <state key="normal" title="Enter New Food"/>
                                 <connections>
                                     <action selector="createNewFood:" destination="gwd-A2-Ztf" eventType="touchUpInside" id="ybp-9p-6tL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0O-fM-AkH">
-                                <rect key="frame" x="8" y="189" width="315" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save as ingredient for random recipes?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mql-nF-NEU">
+                                <rect key="frame" x="8" y="244" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dHz-Xc-CFi">
+                                <rect key="frame" x="151" y="277" width="73" height="29"/>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ingredientSelected:" destination="gwd-A2-Ztf" eventType="valueChanged" id="KVd-td-MmM"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="VVV-5W-TMx" secondAttribute="trailing" constant="8" id="1LI-LR-ktU"/>
+                            <constraint firstItem="dHz-Xc-CFi" firstAttribute="top" secondItem="Mql-nF-NEU" secondAttribute="bottom" constant="12" id="42n-MM-EEO"/>
                             <constraint firstItem="VVV-5W-TMx" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="4db-VF-jWI"/>
                             <constraint firstItem="d0O-fM-AkH" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="5XM-Vj-kBz"/>
-                            <constraint firstItem="VKu-7z-zJm" firstAttribute="top" secondItem="d0O-fM-AkH" secondAttribute="bottom" constant="50" id="621-m6-EEL"/>
+                            <constraint firstItem="Mql-nF-NEU" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="C7B-5N-Vj9"/>
                             <constraint firstItem="VVV-5W-TMx" firstAttribute="top" secondItem="Ws7-cy-E33" secondAttribute="top" constant="8" id="DF3-nv-OHy"/>
                             <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="eDn-w0-g51" secondAttribute="trailing" constant="8" id="IMh-uS-AJm"/>
+                            <constraint firstItem="VKu-7z-zJm" firstAttribute="top" secondItem="dHz-Xc-CFi" secondAttribute="bottom" constant="50" id="Kfu-50-pNb"/>
                             <constraint firstItem="eDn-w0-g51" firstAttribute="top" secondItem="VVV-5W-TMx" secondAttribute="bottom" constant="12" id="N1I-Cd-UUn"/>
+                            <constraint firstItem="Mql-nF-NEU" firstAttribute="top" secondItem="d0O-fM-AkH" secondAttribute="bottom" constant="25" id="OzM-Qw-Poo"/>
                             <constraint firstItem="xWy-T9-CB5" firstAttribute="top" secondItem="hxc-Jc-edb" secondAttribute="bottom" constant="12" id="SVt-XX-ZHe"/>
                             <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="xWy-T9-CB5" secondAttribute="trailing" constant="8" id="ZgD-2I-HuJ"/>
                             <constraint firstItem="hxc-Jc-edb" firstAttribute="top" secondItem="eDn-w0-g51" secondAttribute="bottom" constant="25" id="bgw-IX-pz2"/>
+                            <constraint firstItem="dHz-Xc-CFi" firstAttribute="centerX" secondItem="4ri-0C-NkO" secondAttribute="centerX" id="cYo-iI-yBU"/>
+                            <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="Mql-nF-NEU" secondAttribute="trailing" constant="8" id="gXH-Mj-EM1"/>
                             <constraint firstItem="Ws7-cy-E33" firstAttribute="trailing" secondItem="hxc-Jc-edb" secondAttribute="trailing" constant="8" id="qmE-eB-jPO"/>
                             <constraint firstItem="eDn-w0-g51" firstAttribute="leading" secondItem="Ws7-cy-E33" secondAttribute="leading" constant="8" id="s7c-uB-cE7"/>
                             <constraint firstItem="xWy-T9-CB5" firstAttribute="leading" secondItem="d0O-fM-AkH" secondAttribute="trailing" constant="8" id="thB-JG-4DN"/>
@@ -218,6 +239,7 @@
                     <connections>
                         <outlet property="expirationDateTextField" destination="d0O-fM-AkH" id="Wn8-mc-Din"/>
                         <outlet property="foodNameTextField" destination="eDn-w0-g51" id="Hjn-Gh-5YI"/>
+                        <outlet property="ingredientSegmentedController" destination="dHz-Xc-CFi" id="JQT-hq-DIQ"/>
                         <segue destination="7M6-Nh-Kgt" kind="presentation" identifier="FoodEnteredSegue" id="5Mj-Ux-PJJ"/>
                     </connections>
                 </viewController>
@@ -360,7 +382,6 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xX5-u7-Gcx"/>
         <segue reference="5Mj-Ux-PJJ"/>
     </inferredMetricsTieBreakers>
 </document>

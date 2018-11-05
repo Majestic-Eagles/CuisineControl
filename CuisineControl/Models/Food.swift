@@ -21,7 +21,7 @@ class Food {
     var isPresent: Bool?
     var expirationDate: String? //Entered by user when food is created
     
-    init(dictionary: [String: Any], name: String, expirationDate: String) {
+    init(dictionary: [String: Any], name: String, expirationDate: String, isIngredient: Int) {
         
         let nutritionInfoDictionary = dictionary["nutrients"] as! [String: Any]
         servingSize = "100 grams"
@@ -59,6 +59,11 @@ class Food {
         newFoodObject["fat"] = self.fat
         newFoodObject["expirationDate"] = self.expirationDate
         newFoodObject["name"] = self.name
+        if isIngredient == 0 {
+            newFoodObject["isIngredient"] = true
+        } else {
+            newFoodObject["isIngredient"] = false
+        }
         newFoodObject["user"] = PFUser.current()
         newFoodObject.saveInBackground { (succes: Bool, error: Error?) in
             if succes {

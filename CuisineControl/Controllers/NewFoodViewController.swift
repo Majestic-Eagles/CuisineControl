@@ -12,6 +12,7 @@ class NewFoodViewController: UIViewController {
     
     @IBOutlet weak var foodNameTextField: UITextField!
     @IBOutlet weak var expirationDateTextField: UITextField!
+    @IBOutlet weak var ingredientSegmentedController: UISegmentedControl!
     
     var upc: String?
     
@@ -25,8 +26,11 @@ class NewFoodViewController: UIViewController {
         expirationDateTextField.text = ""
     }
     
+    @IBAction func ingredientSelected(_ sender: Any) {
+    }
+    
     @IBAction func createNewFood(_ sender: Any) {
-        EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc!, name: foodNameTextField.text!, expirationDate: expirationDateTextField.text!)
+        EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc!, name: foodNameTextField.text!, expirationDate: expirationDateTextField.text!, isIngredient: ingredientSegmentedController.selectedSegmentIndex)
         self.performSegue(withIdentifier: "FoodEnteredSegue", sender: nil)
     }
     
@@ -37,6 +41,7 @@ class NewFoodViewController: UIViewController {
         datePicker.addTarget(self, action: #selector(NewFoodViewController.dateChanged(datePicker:)), for: .valueChanged)
         
         expirationDateTextField.inputView = datePicker
+        ingredientSegmentedController.selectedSegmentIndex = -1
 
         // Do any additional setup after loading the view.
     }
