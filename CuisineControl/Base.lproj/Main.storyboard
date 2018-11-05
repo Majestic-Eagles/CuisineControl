@@ -317,13 +317,13 @@
         <!--My Food-->
         <scene sceneID="0LX-Cb-sJ9">
             <objects>
-                <viewController id="dkS-wy-VrV" sceneMemberID="viewController">
+                <viewController id="dkS-wy-VrV" customClass="myFoodViewController" customModule="CuisineControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kBy-lS-blW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-7E-SXQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="88" id="QpZ-Uh-4xB">
@@ -347,6 +347,9 @@
                         <viewLayoutGuide key="safeArea" id="xKG-ge-cOR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Food" image="icons8-ingredients-30" id="9KE-ej-8qo"/>
+                    <connections>
+                        <outlet property="foodTable" destination="r4b-7E-SXQ" id="b4o-tB-CDC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +395,6 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ipg-Ro-YBv"/>
         <segue reference="Qts-iW-URU"/>
     </inferredMetricsTieBreakers>
 </document>
