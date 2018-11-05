@@ -14,7 +14,13 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!)
+        let button1 = UIBarButtonItem(title: "Scan new food", style: .plain, target: self, action: #selector(handleNewScan))
+        self.tabBarController?.navigationItem.rightBarButtonItem = button1
+        //self.navigationItem.rightBarButtonItem = button1
+        //self.navigationController?.navigationItem.setRightBarButton(button1, animated: false)
+        
+        
+        //EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!)
         
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
@@ -31,6 +37,12 @@ class MainViewController: UIViewController {
     
     @IBAction func scanNewItem(_ sender: Any) {
         self.performSegue(withIdentifier: "ScannerSegue", sender: nil)
+    }
+    
+    @objc func handleNewScan() {
+        
+        self.performSegue(withIdentifier: "ScannerSegue", sender: nil)
+        
     }
     
 }
