@@ -99,6 +99,7 @@ class EdamamAPIManager {
                         print(error.localizedDescription)
                     }
                 }
+                task.resume()
             } else if let error = error {
                 print(error.localizedDescription)
             }

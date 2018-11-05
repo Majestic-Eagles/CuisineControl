@@ -382,6 +382,7 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DAD-fP-SWF"/>
         <segue reference="5Mj-Ux-PJJ"/>
     </inferredMetricsTieBreakers>
 </document>
