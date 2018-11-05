@@ -8,14 +8,14 @@
 
 import UIKit
 
-class myFoodViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+class myFoodViewController: UIViewController /*UITableViewDataSource, UITableViewDelegate*/ {
+    /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
+        
+    }*/
     
 
     @IBOutlet weak var foodTable: UITableView!

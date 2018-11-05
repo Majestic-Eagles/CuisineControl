@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
@@ -27,6 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // view controller currently being set in Storyboard as default will be overridden
             window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "MainNavView")
         }
+        // Test to change navigation bar
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.blue
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        //--title color
+        let fontColor = UIColor(red: 80/255.0, green: 80/255.0, blue: 80/255.0, alpha: 1.0)
+        let font = UIFont(name: "Verdana-Bold", size: 20)!
+        let attributes: [NSAttributedStringKey: Any] = [
+            NSAttributedString.Key(rawValue: NSAttributedStringKey.font.rawValue): font,
+            NSAttributedString.Key(rawValue: NSAttributedStringKey.foregroundColor.rawValue): fontColor
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attributes
         
         return true
     }
