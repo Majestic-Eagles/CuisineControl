@@ -293,7 +293,7 @@
         <!--My Food-->
         <scene sceneID="0LX-Cb-sJ9">
             <objects>
-                <viewController id="dkS-wy-VrV" sceneMemberID="viewController">
+                <viewController id="dkS-wy-VrV" customClass="RecipeViewController" customModule="CuisineControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kBy-lS-blW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,13 +302,40 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="88" id="QpZ-Uh-4xB">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="QpZ-Uh-4xB" customClass="RecipeCell" customModule="CuisineControl" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QpZ-Uh-4xB" id="aj4-fM-sJR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mcq-FW-pKh">
+                                                    <rect key="frame" x="8" y="8" width="100" height="99.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="99.5" id="aNJ-L7-4Ht"/>
+                                                        <constraint firstAttribute="width" constant="100" id="pMG-Rm-6wB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3V-hW-Y0N">
+                                                    <rect key="frame" x="116" y="8" width="251" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="t3V-hW-Y0N" firstAttribute="top" secondItem="aj4-fM-sJR" secondAttribute="top" constant="8" id="CSQ-Uq-APJ"/>
+                                                <constraint firstItem="mcq-FW-pKh" firstAttribute="top" secondItem="aj4-fM-sJR" secondAttribute="top" constant="8" id="JGh-yi-JCP"/>
+                                                <constraint firstItem="mcq-FW-pKh" firstAttribute="leading" secondItem="aj4-fM-sJR" secondAttribute="leading" constant="8" id="PqI-bb-2ma"/>
+                                                <constraint firstAttribute="bottom" secondItem="mcq-FW-pKh" secondAttribute="bottom" constant="8" id="ZFo-Av-sId"/>
+                                                <constraint firstItem="t3V-hW-Y0N" firstAttribute="leading" secondItem="mcq-FW-pKh" secondAttribute="trailing" constant="8" id="h4o-yH-fkm"/>
+                                                <constraint firstAttribute="trailing" secondItem="t3V-hW-Y0N" secondAttribute="trailing" constant="8" id="nCZ-Sh-Pke"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeImageView" destination="mcq-FW-pKh" id="see-5z-PI1"/>
+                                            <outlet property="recipeNameLabel" destination="t3V-hW-Y0N" id="jCu-l7-Csn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -323,10 +350,13 @@
                         <viewLayoutGuide key="safeArea" id="xKG-ge-cOR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Food" image="icons8-ingredients-30" id="9KE-ej-8qo"/>
+                    <connections>
+                        <outlet property="foodTable" destination="r4b-7E-SXQ" id="b4o-tB-CDC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3206" y="983"/>
+            <point key="canvasLocation" x="3205.5999999999999" y="982.75862068965523"/>
         </scene>
         <!--Cuisine Control-->
         <scene sceneID="ukn-vq-4X9">

@@ -14,19 +14,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button1 = UIBarButtonItem(title: "Scan new food", style: .plain, target: self, action: #selector(handleNewScan))
-        self.tabBarController?.navigationItem.rightBarButtonItem = button1
-        //self.navigationItem.rightBarButtonItem = button1
-        //self.navigationController?.navigationItem.setRightBarButton(button1, animated: false)
-        
-        
-        //EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!)
+        EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!)
         
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //UPCItemAPIManager.shared.getUPC(UPC: upc)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let button1 = UIBarButtonItem(title: "Scan new food", style: .plain, target: self, action: #selector(handleNewScan))
+        self.tabBarController?.navigationItem.rightBarButtonItem = button1
     }
 
     override func didReceiveMemoryWarning() {
