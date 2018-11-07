@@ -7,21 +7,28 @@
 //
 
 import Foundation
+import UIKit
+import AlamofireImage
 
 class Recipe {
     
     var ingredients: [Food]?
     var name: String?
-    var description: String?
-//    var foodImage:
+    var recipeImage: UIImage
     var calories: Int?
     var protein: Int?
     var fat: Int?
     var carbohydrates: Int?
     var instructions: String?
-    var isAvailable: Bool!
-    var isMissing: [Food]?
+    //var isAvailable: Bool!
+    //var isMissing: [Food]?
     var cookTime: Int?
+    
+    init(dictionary: [String: Any]) {
+        name = dictionary["label"] as! String
+        recipeImage = af_setImage(url: URL(dictionary["image"]))
+        
+    }
     
     
 }

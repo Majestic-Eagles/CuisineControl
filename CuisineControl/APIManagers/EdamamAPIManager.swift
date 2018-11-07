@@ -74,7 +74,7 @@ class EdamamAPIManager {
         
     }
     
-    func getRandomRecipe(user: PFUser, numberOfRecipes: Int) -> [[String: Any]] {
+    func getRandomRecipe(user: PFUser, numberOfRecipes: Int) -> [Recipe] {
         
         let query = PFQuery(className: "Foods")
         query.whereKey("isIngredient", equalTo: true)
@@ -82,14 +82,14 @@ class EdamamAPIManager {
         print("Query started")
         let numberOfResults = numberOfRecipes * 3
         let numberOfResultsString = "&to=\(numberOfResults)"
-        var randomRecipeList: [[String: Any]] = []
+        var randomRecipeList: [Recipe] = []
         
         query.findObjectsInBackground { (foods, error) in
             if let foods = foods {
                 if(foods != []){
                 print("Query success")
                 self.returnedFoods = foods
-                print(foods)
+                //print(foods)
                 let randomIngredientIndex = Int(arc4random_uniform(UInt32(self.returnedFoods!.count)))
                 let randomIngredient = self.returnedFoods![randomIngredientIndex]["name"]
                 let q = "q=\(randomIngredient!)"
@@ -103,11 +103,12 @@ class EdamamAPIManager {
                         let hitsDictionary = dictionary["hits"] as! NSArray
                         //print(dictionary)
                         //print("aksjdfghjasgfdkajsdgfhjkasgfkhjgasdkhjfgkahjsdgfgjasgdfkjadsjh")
-                        print(hitsDictionary)
-                        print(hitsDictionary.count)
+                        //print(hitsDictionary)
+                        //print(hitsDictionary.count)
                         randomRecipeIndexList = self.createRandomNumberArray(maxNumber: numberOfResults, numberOfEntries: numberOfRecipes)
                         for i in 0...(numberOfRecipes - 1) {
-                            randomRecipeList.append(hitsDictionary[randomRecipeIndexList[i]] as! [String: Any])
+                            randomRecipeList.append(Recipe(dictionary: hitsDictionary[randomRecipeIndexList[i]] as! [String: Any]))
+                            return
                         }
                     } else if let error = error {
                         print(error.localizedDescription)
