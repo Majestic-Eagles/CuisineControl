@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RecipeCell: UITableViewCell {
     
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
     
+    var recipe: Recipe! {
+        didSet {
+            self.recipeImageView.af_setImage(withURL: recipe.recipeImageURL)
+            self.recipeNameLabel.text = recipe.name
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

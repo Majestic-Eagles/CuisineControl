@@ -74,7 +74,7 @@ class EdamamAPIManager {
         
     }
     
-    func getRandomRecipe(user: PFUser, numberOfRecipes: Int) -> [Recipe] {
+    func getRandomRecipe(user: PFUser, numberOfRecipes: Int, completionHandler: @escaping ([Recipe]?, Error?) -> Void) {
         
         let query = PFQuery(className: "Foods")
         query.whereKey("isIngredient", equalTo: true)
@@ -101,14 +101,9 @@ class EdamamAPIManager {
                         var randomRecipeIndexList: [Int]
                         let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                         let hitsDictionary = dictionary["hits"] as! NSArray
-                        //print(dictionary)
-                        //print("aksjdfghjasgfdkajsdgfhjkasgfkhjgasdkhjfgkahjsdgfgjasgdfkjadsjh")
-                        //print(hitsDictionary)
-                        //print(hitsDictionary.count)
                         randomRecipeIndexList = self.createRandomNumberArray(maxNumber: numberOfResults, numberOfEntries: numberOfRecipes)
                         for i in 0...(numberOfRecipes - 1) {
                             randomRecipeList.append(Recipe(dictionary: hitsDictionary[randomRecipeIndexList[i]] as! [String: Any]))
-                            return
                         }
                     } else if let error = error {
                         print(error.localizedDescription)
@@ -120,8 +115,6 @@ class EdamamAPIManager {
                 print(error.localizedDescription)
             }
         }
-        
-        return randomRecipeList
         
     }
     

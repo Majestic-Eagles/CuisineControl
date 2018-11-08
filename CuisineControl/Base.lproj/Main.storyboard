@@ -351,7 +351,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Food" image="icons8-ingredients-30" id="9KE-ej-8qo"/>
                     <connections>
-                        <outlet property="foodTable" destination="r4b-7E-SXQ" id="b4o-tB-CDC"/>
+                        <outlet property="recipeTableView" destination="r4b-7E-SXQ" id="Yo3-P8-y06"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +397,6 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YDA-VS-ppy"/>
         <segue reference="Qts-iW-URU"/>
     </inferredMetricsTieBreakers>
 </document>

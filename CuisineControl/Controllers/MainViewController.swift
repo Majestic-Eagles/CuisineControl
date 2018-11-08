@@ -14,8 +14,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!, numberOfRecipes: 5)
-        
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
