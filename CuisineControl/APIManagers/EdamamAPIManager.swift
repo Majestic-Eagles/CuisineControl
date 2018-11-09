@@ -98,6 +98,7 @@ class EdamamAPIManager {
                 let request = URLRequest(url: url!)
                 let task = self.session.dataTask(with: request) { (data, response, error) in
                     if let data = data {
+                        print("Recipe search is running")
                         var randomRecipeIndexList: [Int]
                         let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                         let hitsDictionary = dictionary["hits"] as! NSArray

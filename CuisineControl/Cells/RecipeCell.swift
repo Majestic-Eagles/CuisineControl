@@ -16,6 +16,7 @@ class RecipeCell: UITableViewCell {
     
     var recipe: Recipe! {
         didSet {
+            print("Recipe is being set")
             self.recipeImageView.af_setImage(withURL: recipe.recipeImageURL)
             self.recipeNameLabel.text = recipe.name
         }

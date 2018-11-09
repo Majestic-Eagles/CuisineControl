@@ -24,6 +24,7 @@ class Recipe {
     var cookTime: NSNumber
     
     init(dictionary: [String: Any]) {
+        print("Recipes are being initialized")
         let recipeDictionary = dictionary["recipe"] as! [String: Any]
         let nutritionDictionary = recipeDictionary["totalNutrients"] as! [String: Any]
         let fatDictionary = nutritionDictionary["FAT"] as! [String: Any]
