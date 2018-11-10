@@ -2,7 +2,7 @@
 
 **CuisineControl** is an app that scans food items in order to store their expiration dates.  In addition, CuisineControl can keep track of what foods one has and use that information to generate a random recipe for the person to use.  CuisineControl can also specify these recipes, for example limiting the recipes to "Mexican" recipes or by limiting which ingredients that the person has.
 
-Time spent: **1** hours spent in total
+Time spent: **35** hours spent in total
 
 ## Parse and Api's
 **Parse**
@@ -56,8 +56,10 @@ The following **required** functionality is completed:
 - [X] User can use the app to scan the barcodes on food
 - [X] User can store their foods in an online database for the app
 - [X] User can specify what the foods that are being stored are
-- [ ] User can generate a random recipe
-- [ ] Recipe is generated based on the ingredients the user has
+- [X] User can generate a random recipe
+- [X] Recipe is generated based on the ingredients the user has
+- [ ] User can can see what foods they have
+- [ ] User can delete a food from their food list (also deletes food from Parse)
 
 The following **stretch** features are implemented:
 
