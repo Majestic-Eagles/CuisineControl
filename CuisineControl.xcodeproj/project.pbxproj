@@ -16,6 +16,8 @@
 		73BF4D9F218114C200561447 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4D9E218114C200561447 /* Food.swift */; };
 		73BF4DA1218114D400561447 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF4DA0218114D400561447 /* Recipe.swift */; };
 		73DD54A22191E186003E11E6 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD54A12191E186003E11E6 /* RecipeCell.swift */; };
+		73DD54A521967300003E11E6 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD54A421967300003E11E6 /* RecipeDetailViewController.swift */; };
+		73DD54A721967390003E11E6 /* RecipeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD54A621967390003E11E6 /* RecipeWebViewController.swift */; };
 		73DF7142216BD9CC002DE93A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF7141216BD9CC002DE93A /* AppDelegate.swift */; };
 		73DF7144216BD9CC002DE93A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF7143216BD9CC002DE93A /* LoginViewController.swift */; };
 		73DF7147216BD9CC002DE93A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DF7145216BD9CC002DE93A /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		73BF4D9E218114C200561447 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		73BF4DA0218114D400561447 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		73DD54A12191E186003E11E6 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		73DD54A421967300003E11E6 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeDetailViewController.swift; path = CuisineControl/Controllers/RecipeDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		73DD54A621967390003E11E6 /* RecipeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeWebViewController.swift; sourceTree = "<group>"; };
 		73DF713E216BD9CC002DE93A /* CuisineControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuisineControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DF7141216BD9CC002DE93A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DF7143216BD9CC002DE93A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				73DF7143216BD9CC002DE93A /* LoginViewController.swift */,
+				73DD54A421967300003E11E6 /* RecipeDetailViewController.swift */,
+				73DD54A621967390003E11E6 /* RecipeWebViewController.swift */,
 				73419A5D218780E6006AED06 /* BarCodeScannerViewController.swift */,
 				73419A91218D0E1E006AED06 /* NewFoodViewController.swift */,
 				AA0C74FE2190EBAB003EA1F4 /* RecipeViewController.swift */,
@@ -362,8 +368,10 @@
 			files = (
 				73BF4D9D2181147A00561447 /* EdamamAPIManager.swift in Sources */,
 				73BF4D9F218114C200561447 /* Food.swift in Sources */,
+				73DD54A521967300003E11E6 /* RecipeDetailViewController.swift in Sources */,
 				AA0C74FF2190EBAB003EA1F4 /* RecipeViewController.swift in Sources */,
 				73DF7144216BD9CC002DE93A /* LoginViewController.swift in Sources */,
+				73DD54A721967390003E11E6 /* RecipeWebViewController.swift in Sources */,
 				AA4D40A0218A4EF500057DFF /* tabBarCon.swift in Sources */,
 				AA4D406421857E7F00057DFF /* MainViewController.swift in Sources */,
 				73419A5E218780E6006AED06 /* BarCodeScannerViewController.swift in Sources */,

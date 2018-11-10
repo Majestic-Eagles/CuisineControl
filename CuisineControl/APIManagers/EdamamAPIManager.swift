@@ -85,44 +85,39 @@ class EdamamAPIManager {
         var randomRecipeList: [Recipe] = []
         
         query.findObjectsInBackground { (foods, error) in
-            DispatchQueue.main.async {
-                if let foods = foods {
-                    if (foods != []) {
-                        print("Query success")
-                        self.returnedFoods = foods
-                        //print(foods)
-                        let randomIngredientIndex = Int(arc4random_uniform(UInt32(self.returnedFoods!.count)))
-                        let randomIngredient = self.returnedFoods![randomIngredientIndex]["name"]
-                        let q = "q=\(randomIngredient!)"
-                        
-                        let url = URL(string: self.baseURLString + self.searchString + q + self.appID + self.searchApplicationID + self.appKey + self.searchApplicationKey + numberOfResultsString)
-                        let request = URLRequest(url: url!)
-                        let task = self.session.dataTask(with: request) { (data, response, error) in
-                            if let data = data {
-                                print("Recipe search is running")
-                                var randomRecipeIndexList: [Int]
-                                let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                                let hitsDictionary = dictionary["hits"] as! NSArray
-                                randomRecipeIndexList = self.createRandomNumberArray(maxNumber: numberOfResults, numberOfEntries: numberOfRecipes)
-                                for i in 0...(numberOfRecipes - 1) {
-                                    randomRecipeList.append(Recipe(dictionary: hitsDictionary[randomRecipeIndexList[i]] as! [String: Any]))
-                                }
-                                completionHandler(randomRecipeList, nil)
-                            } else if let error = error {
-                                //print(error.localizedDescription)
-                                completionHandler(nil, error)
+            if let foods = foods {
+                if (foods != []) {
+                    print("Query success")
+                    self.returnedFoods = foods
+                    //print(foods)
+                    let randomIngredientIndex = Int(arc4random_uniform(UInt32(self.returnedFoods!.count)))
+                    let randomIngredient = self.returnedFoods![randomIngredientIndex]["name"]
+                    let q = "q=\(randomIngredient!)"
+                    
+                    let url = URL(string: self.baseURLString + self.searchString + q + self.appID + self.searchApplicationID + self.appKey + self.searchApplicationKey + numberOfResultsString)
+                    let request = URLRequest(url: url!)
+                    let task = self.session.dataTask(with: request) { (data, response, error) in
+                        if let data = data {
+                            print("Recipe search is running")
+                            var randomRecipeIndexList: [Int]
+                            let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                            let hitsDictionary = dictionary["hits"] as! NSArray
+                            randomRecipeIndexList = self.createRandomNumberArray(maxNumber: numberOfResults, numberOfEntries: numberOfRecipes)
+                            for i in 0...(numberOfRecipes - 1) {
+                                randomRecipeList.append(Recipe(dictionary: hitsDictionary[randomRecipeIndexList[i]] as! [String: Any]))
                             }
+                            completionHandler(randomRecipeList, nil)
+                        } else if let error = error {
+                            //print(error.localizedDescription)
+                            completionHandler(nil, error)
                         }
-                        task.resume()
-                    } else if let error = error {
-                        //print(error.localizedDescription)
-                        completionHandler(nil, error)
                     }
+                    task.resume()
+                } else if let error = error {
+                    //print(error.localizedDescription)
+                    completionHandler(nil, error)
                 }
             }
-            
-            
-            
         }
     }
     

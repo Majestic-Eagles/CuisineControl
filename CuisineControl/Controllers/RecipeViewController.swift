@@ -58,5 +58,16 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailSegue" {
+            let cell = sender as! RecipeCell
+            if let indexPath = recipeTableView.indexPath(for: cell) {
+                let recipe = recipes[indexPath.row]
+                let recipeDetailViewController = segue.destination as! RecipeDetailViewController
+                recipeDetailViewController.recipe = recipe
+            }
+        }
+    }
 
 }

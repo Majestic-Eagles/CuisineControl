@@ -11,9 +11,10 @@ import UIKit
 
 class Recipe {
     
-    var ingredients: [Food]?
+    var ingredients = ""
     var name: String
     var recipeImageURL: URL!
+    var recipeURL: URL!
     var calories: NSNumber
     var protein: NSNumber
     var fat: NSNumber
@@ -24,6 +25,7 @@ class Recipe {
     var cookTime: NSNumber
     
     init(dictionary: [String: Any]) {
+        print(dictionary)
         print("Recipes are being initialized")
         let recipeDictionary = dictionary["recipe"] as! [String: Any]
         let nutritionDictionary = recipeDictionary["totalNutrients"] as! [String: Any]
@@ -40,6 +42,12 @@ class Recipe {
         fat = fatDictionary["quantity"] as! NSNumber
         protein = proteinDictionary["quantity"] as! NSNumber
         carbohydrates = carbDictionary["quantity"] as! NSNumber
+        let ingredientsArray = recipeDictionary["ingredientLines"] as! NSArray
+        for ingredient in ingredientsArray {
+            ingredients += ingredient as! String
+            ingredients += "\n"
+        }
+        recipeURL = URL(string: recipeDictionary["url"] as! String)
         /*
         print("name: ", name)
         print("recipeImageURL: ", recipeImageURL)
