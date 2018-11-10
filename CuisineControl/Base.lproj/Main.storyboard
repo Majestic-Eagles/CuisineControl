@@ -335,6 +335,7 @@
                                         <connections>
                                             <outlet property="recipeImageView" destination="mcq-FW-pKh" id="see-5z-PI1"/>
                                             <outlet property="recipeNameLabel" destination="t3V-hW-Y0N" id="jCu-l7-Csn"/>
+                                            <segue destination="vY3-1z-Cm2" kind="show" id="Fvp-u5-GyZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -357,6 +358,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-4H-N6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3205.5999999999999" y="982.75862068965523"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mUJ-Ye-MeL">
+            <objects>
+                <viewController id="vY3-1z-Cm2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEn-d1-FZE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wqR-la-9mp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDE-3H-hyU">
+                                <rect key="frame" x="8" y="223" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-G0-70T">
+                                <rect key="frame" x="8" y="281" width="359" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="t1M-zo-wUC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erB-Bw-MN1">
+                                <rect key="frame" x="245" y="619" width="122" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="View Recipe"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeT-9J-dyg">
+                                <rect key="frame" x="8" y="252" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Tb-WP-Foc" firstAttribute="trailing" secondItem="erB-Bw-MN1" secondAttribute="trailing" constant="8" id="2FO-ob-aaU"/>
+                            <constraint firstItem="JeT-9J-dyg" firstAttribute="leading" secondItem="5Tb-WP-Foc" secondAttribute="leading" constant="8" id="BM8-Ch-FwP"/>
+                            <constraint firstItem="wqR-la-9mp" firstAttribute="top" secondItem="eEn-d1-FZE" secondAttribute="top" id="BsB-lZ-Kou"/>
+                            <constraint firstItem="5Tb-WP-Foc" firstAttribute="bottom" secondItem="erB-Bw-MN1" secondAttribute="bottom" constant="8" id="Ecl-kq-7rb"/>
+                            <constraint firstItem="zLx-G0-70T" firstAttribute="top" secondItem="JeT-9J-dyg" secondAttribute="bottom" constant="8" id="FdN-ah-hzC"/>
+                            <constraint firstItem="QDE-3H-hyU" firstAttribute="top" secondItem="wqR-la-9mp" secondAttribute="bottom" constant="8" id="HKr-hj-ExF"/>
+                            <constraint firstItem="5Tb-WP-Foc" firstAttribute="trailing" secondItem="erB-Bw-MN1" secondAttribute="trailing" constant="8" id="KR0-PX-ZMC"/>
+                            <constraint firstItem="zLx-G0-70T" firstAttribute="leading" secondItem="5Tb-WP-Foc" secondAttribute="leading" constant="8" id="Rar-34-RCM"/>
+                            <constraint firstItem="wqR-la-9mp" firstAttribute="trailing" secondItem="5Tb-WP-Foc" secondAttribute="trailing" id="S65-vi-D6d"/>
+                            <constraint firstItem="5Tb-WP-Foc" firstAttribute="trailing" secondItem="zLx-G0-70T" secondAttribute="trailing" constant="8" id="Tsm-PI-dhG"/>
+                            <constraint firstItem="erB-Bw-MN1" firstAttribute="top" secondItem="zLx-G0-70T" secondAttribute="bottom" constant="8" id="Y9U-0L-zYv"/>
+                            <constraint firstItem="wqR-la-9mp" firstAttribute="leading" secondItem="5Tb-WP-Foc" secondAttribute="leading" id="Z5x-8a-cJ7"/>
+                            <constraint firstItem="QDE-3H-hyU" firstAttribute="leading" secondItem="5Tb-WP-Foc" secondAttribute="leading" constant="8" id="afB-za-Yqx"/>
+                            <constraint firstItem="5Tb-WP-Foc" firstAttribute="bottom" secondItem="erB-Bw-MN1" secondAttribute="bottom" constant="8" id="hND-Sh-I9P"/>
+                            <constraint firstItem="JeT-9J-dyg" firstAttribute="top" secondItem="QDE-3H-hyU" secondAttribute="bottom" constant="8" id="rkK-1S-lvc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Tb-WP-Foc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgF-ep-ihp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3932" y="982.75862068965523"/>
         </scene>
         <!--Cuisine Control-->
         <scene sceneID="ukn-vq-4X9">

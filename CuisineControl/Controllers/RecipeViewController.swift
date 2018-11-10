@@ -46,16 +46,15 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @objc func handleRandomRecipe() {
-        print("Button Function ran!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!, numberOfRecipes: 5) { (recipes, error) in
-            print("Completion Block Running!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             if let recipes = recipes {
-                print("Recipes successfully loaded!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                print("working")
                 self.recipes = recipes
                 self.recipeTableView.reloadData()
             } else if let error = error {
                 print(error.localizedDescription)
             }
+            
         }
         
     }

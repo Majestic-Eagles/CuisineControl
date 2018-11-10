@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
