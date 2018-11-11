@@ -27,6 +27,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         foodTable.delegate = self
         print("Foods that belong to \(PFUser.current()?.username!)")
         getFoods()
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getFoods), userInfo: nil, repeats: true)
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)

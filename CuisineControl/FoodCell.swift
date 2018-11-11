@@ -29,6 +29,7 @@ class FoodCell: UITableViewCell {
     }
 
     @IBAction func deleteFood(_ sender: Any) {
+        food?.deleteEventually()
         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
