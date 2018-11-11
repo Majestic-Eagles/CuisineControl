@@ -58,8 +58,8 @@ The following **required** functionality is completed:
 - [X] User can specify what the foods that are being stored are
 - [X] User can generate a random recipe
 - [X] Recipe is generated based on the ingredients the user has
-- [ ] User can can see what foods they have
-- [ ] User can delete a food from their food list (also deletes food from Parse)
+- [X] User can can see what foods they have
+- [X] User can delete a food from their food list (also deletes food from Parse)
 
 The following **stretch** features are implemented:
 
@@ -76,6 +76,8 @@ Here's a walkthrough of implemented user stories:
 <img src='https://imgur.com/WGdqrwz.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://imgur.com/bXI4mVF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://imgur.com/kk5FF0D.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://image.ibb.co/iHTQLA/CCRemake.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
