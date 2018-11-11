@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class Food {
+class Food{
     
     var name: String? //Simple name given by the user, used for finding recipes
     var apiName: String? //Name under "label" section of the JSON data, sometimes not useful

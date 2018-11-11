@@ -43,7 +43,7 @@ class EdamamAPIManager {
                     let hintsArray = dictionary["hints"] as! NSArray
                     let foodLabelDictionary = hintsArray[0] as! [String: Any]
                     let foodDataDictionary = foodLabelDictionary["food"] as! [String: Any]
-                    print(foodDataDictionary)
+                    //print(foodDataDictionary)
                     let newFood = Food(dictionary: foodDataDictionary, name: name, expirationDate: expirationDate, isIngredient: isIngredient)
                 } else {
                     print(error?.localizedDescription)
@@ -119,6 +119,21 @@ class EdamamAPIManager {
                 }
             }
         }
+    }
+    
+    func getFoodForUser(user : PFUser) -> [PFObject] {
+        var goodFoods:[PFObject] = []
+        let query = PFQuery(className: "Foods")
+        query.whereKey("user", equalTo: user)
+        query.findObjectsInBackground(block: {(foods, error) in
+            if let foods = foods{
+                goodFoods = foods
+                print(goodFoods)
+            }else if let error = error{
+                print(error.localizedDescription)
+            }
+        })
+        return goodFoods
     }
     
     func createRandomNumberArray(maxNumber: Int, numberOfEntries: Int) -> [Int] {

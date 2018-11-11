@@ -9,18 +9,51 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
+   
+    
+    @IBOutlet weak var foodTable: UITableView!
+    
+    var foods:[PFObject]! = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        foodTable.dataSource = self
+        foodTable.delegate = self
+        print("Foods that belong to \(PFUser.current()?.username!)")
+        getFoods()
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //UPCItemAPIManager.shared.getUPC(UPC: upc)
         
+    }
+    @objc func getFoods(){
+        let query = PFQuery(className: "Foods")
+        query.whereKey("user", equalTo: PFUser.current()!)
+        query.findObjectsInBackground(block: {(foods, error) in
+            if let foods = foods{
+                self.foods = foods
+                self.foodTable.reloadData()
+            }else if let error = error{
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foods.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = foodTable.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! FoodCell
+        cell.food = foods[indexPath.row]
+        return cell
     }
     
     override func viewDidAppear(_ animated: Bool) {
