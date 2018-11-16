@@ -8,10 +8,14 @@
 
 import UIKit
 import Parse
+import NVActivityIndicatorView
 
 class RecipeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var recipes: [Recipe] = []
+    var loadingView: NVActivityIndicatorView?
+    var shadowView: UIView?
+    var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
@@ -32,6 +36,16 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
         recipeTableView.delegate = self
         recipeTableView.dataSource = self
         
+        var indicatorSize: CGRect = CGRect(x: view.center.x, y: view.center.y, width: 100, height: 100)
+        shadowView = UIView(frame: view.frame)
+        loadingView = NVActivityIndicatorView(frame: indicatorSize, type: .lineScalePulseOut, color: myGreen, padding: 0)
+        self.view.addSubview(shadowView!)
+        shadowView?.backgroundColor = UIColor.gray
+        shadowView?.layer.masksToBounds = true
+        shadowView?.alpha = 0.5
+        shadowView?.isHidden = true
+        self.view.addSubview(loadingView!)
+        loadingView?.isHidden = false
         
     }
 
@@ -46,8 +60,13 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @objc func handleRandomRecipe() {
+        
+        self.shadowView?.isHidden = false
+        loadingView!.startAnimating()
         EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!, numberOfRecipes: 5) { (recipes, error) in
             if let recipes = recipes {
+                self.shadowView?.isHidden = true
+                self.loadingView!.stopAnimating()
                 print("working")
                 self.recipes = recipes
                 self.recipeTableView.reloadData()

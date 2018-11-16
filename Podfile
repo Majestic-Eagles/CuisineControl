@@ -7,9 +7,10 @@ target 'CuisineControl' do
   use_frameworks!
 
   # Pods for CuisineControl
-	pod 'Parse'
+	pod 'Parse', '~> 1.17.1'
 	pod 'Alamofire'
 	pod 'AlamofireImage'
+	pod 'NVActivityIndicatorView'
 
 
   target 'CuisineControlUITests' do

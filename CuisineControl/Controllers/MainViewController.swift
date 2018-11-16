@@ -11,10 +11,6 @@ import Parse
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    
-   
-    
     @IBOutlet weak var foodTable: UITableView!
     
     var foods:[PFObject]! = []
