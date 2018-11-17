@@ -21,6 +21,7 @@ class FoodCell: UITableViewCell {
             expireDate.text = String("\(food?.object(forKey: "expirationDate") ?? "")")
         }
     }
+    var index:IndexPath!
     
     
     override func awakeFromNib() {

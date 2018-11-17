@@ -60,22 +60,21 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @objc func handleRandomRecipe() {
-        
-        self.shadowView?.isHidden = false
-        loadingView!.startAnimating()
-        EdamamAPIManager.shared.getRandomRecipe(user: PFUser.current()!, numberOfRecipes: 5) { (recipes, error) in
-            if let recipes = recipes {
-                self.shadowView?.isHidden = true
-                self.loadingView!.stopAnimating()
-                print("working")
-                self.recipes = recipes
-                self.recipeTableView.reloadData()
-            } else if let error = error {
-                print(error.localizedDescription)
+        if let user = PFUser.current(){
+            self.shadowView?.isHidden = false
+            loadingView!.startAnimating()
+            EdamamAPIManager.shared.getRandomRecipe(user: user, numberOfRecipes: 5) { (recipes, error) in
+                if let recipes = recipes {
+                    self.shadowView?.isHidden = true
+                    self.loadingView!.stopAnimating()
+                    print("working")
+                    self.recipes = recipes
+                    self.recipeTableView.reloadData()
+                } else if let error = error {
+                    print(error.localizedDescription)
+                }
             }
-            
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -32,15 +32,17 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     @objc func getFoods(){
         let query = PFQuery(className: "Foods")
-        query.whereKey("user", equalTo: PFUser.current()!)
-        query.findObjectsInBackground(block: {(foods, error) in
-            if let foods = foods{
-                self.foods = foods
-                self.foodTable.reloadData()
-            }else if let error = error{
-                print(error.localizedDescription)
-            }
-        })
+        if let user = PFUser.current(){
+            query.whereKey("user", equalTo: user)
+            query.findObjectsInBackground(block: {(foods, error) in
+                if let foods = foods{
+                    self.foods = foods
+                    self.foodTable.reloadData()
+                }else if let error = error{
+                    print(error.localizedDescription)
+                }
+            })
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +51,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = foodTable.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! FoodCell
+        cell.index = indexPath
         cell.food = foods[indexPath.row]
         return cell
     }
@@ -72,6 +75,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.performSegue(withIdentifier: "ScannerSegue", sender: nil)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "fdetailSegue"){
+            let dest = segue.destination as! fdetailViewController
+            if let cell = sender as? FoodCell{
+                let food = foods[cell.index.row]
+                print(food)
+                dest.food = foods[cell.index.row]
+            }
+            
+        }
     }
     
 }
