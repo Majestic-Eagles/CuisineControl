@@ -55,8 +55,11 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let button1 = UIBarButtonItem(title: "Random Recipe", style: .plain, target: self, action: #selector(handleRandomRecipe))
+        let button1 = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(handleRandomRecipe))
+            button1.setBackgroundImage(UIImage(named: "icons8-food-24"), for: .normal, barMetrics: .default)
+            button1.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.tabBarController?.navigationItem.rightBarButtonItem = button1
+        self.tabBarController?.navigationController?.navigationBar.barTintColor = myGreen
     }
     
     @objc func handleRandomRecipe() {
