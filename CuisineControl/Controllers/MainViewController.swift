@@ -58,24 +58,28 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.food = foods[indexPath.row]
         return cell
     }
-    /*@IBAction func getInfo(_ sender: UITapGestureRecognizer) {
+   /* @IBAction func getInfo(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "fdetailSegue", sender: sender.view)
-    }*/
+    }
     
     @IBAction func swipeDelete(_ sender: UIPanGestureRecognizer) {
         if let cell = sender.view as? FoodCell{
-            print("is food cell")
             let translation = sender.translation(in: foodTable.cellForRow(at: cell.index)?.contentView)
-            let modView = foodTable.cellForRow(at: cell.index)?.contentView
+            let modView = foodTable.cellForRow(at: cell.index!)?.contentView
+            
         if(sender.state == .began){
             
             xstarted = sender.location(in: modView).x
             
         }else if(sender.state == .changed){
             if(translation.x < 0){
-                let transAmt = max(-100, Double(translation.x))
-                modView?.transform = CGAffineTransform(translationX: CGFloat(transAmt), y: 0)
-                if(translation.x < -75){
+               
+                let transAmt = max(-125, Double(translation.x))
+                print(transAmt)
+                UIView.animate(withDuration: 0, animations: {
+                })
+                
+                if(translation.x < -125){
                     cell.deleteFood(cell)
                 }
             }
@@ -89,7 +93,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print(sender.view?.accessibilityIdentifier)
         }
         
-    }
+    }*/
     
     
     

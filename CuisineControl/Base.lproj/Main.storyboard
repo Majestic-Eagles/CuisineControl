@@ -332,8 +332,7 @@
                                             <outlet property="deleteButton" destination="ZCi-TG-mF3" id="xHa-qr-4Ii"/>
                                             <outlet property="expireDate" destination="uMK-sq-QAa" id="kpp-x0-qBx"/>
                                             <outlet property="nameLab" destination="cyc-gA-9NL" id="7ck-jW-wTZ"/>
-                                            <outletCollection property="gestureRecognizers" destination="cw9-dp-40S" appends="YES" id="z1K-nX-w4V"/>
-                                            <outletCollection property="gestureRecognizers" destination="Zcq-ng-gzF" appends="YES" id="Dr4-Cb-bCx"/>
+                                            <segue destination="eRG-Hc-Y5z" kind="show" identifier="fdetailSegue" id="4Za-9r-NbC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -355,20 +354,9 @@
                     <connections>
                         <outlet property="foodTable" destination="ZmI-TP-vyJ" id="OCj-H7-Bcq"/>
                         <segue destination="Pay-YM-yZe" kind="presentation" identifier="ScannerSegue" id="YDA-VS-ppy"/>
-                        <segue destination="eRG-Hc-Y5z" kind="show" identifier="fdetailSegue" id="foc-tA-fHi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw3-nu-70B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cw9-dp-40S">
-                    <connections>
-                        <action selector="getInfo:" destination="rzz-NA-VtP" id="sww-wh-4fi"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Zcq-ng-gzF">
-                    <connections>
-                        <action selector="swipeDelete:" destination="rzz-NA-VtP" id="84B-MK-w4y"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4368.8000000000002" y="196.55172413793105"/>
         </scene>
@@ -381,7 +369,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-Db-grg">
-                                <rect key="frame" x="138" y="141" width="99" height="51"/>
+                                <rect key="frame" x="138" y="97" width="99" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -389,7 +377,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9w-4g-yic">
-                                <rect key="frame" x="66" y="194" width="240" height="174"/>
+                                <rect key="frame" x="66" y="150" width="240" height="174"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3I-gZ-LiU">
                                         <rect key="frame" x="4" y="4" width="232" height="166"/>
@@ -851,6 +839,7 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="YDA-VS-ppy"/>
         <segue reference="Qts-iW-URU"/>
     </inferredMetricsTieBreakers>
 </document>
