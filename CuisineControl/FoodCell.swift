@@ -22,6 +22,7 @@ class FoodCell: UITableViewCell {
         }
     }
     var index:IndexPath!
+    var xstarted:CGFloat?
     
     
     override func awakeFromNib() {

@@ -40,9 +40,44 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
+        /*A*/
+        if(AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined){
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted) in
+                if granted{
+                    self.setUpCamera()
+                }
+            })
+        }
+        if(AVCaptureDevice.authorizationStatus(for: .video) == .authorized){
+            print("authed")
+            setUpCamera()
+            AVCaptureDevice.default(for: .video)
+        }
         
-        guard let captureDevice = deviceDiscoverySession.devices.first else {
+        
+        // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        videoPreviewLayer?.frame = view.layer.bounds
+        view.layer.addSublayer(videoPreviewLayer!)
+        captureSession.startRunning()
+        
+        view.bringSubview(toFront: messageLabel)
+        view.bringSubview(toFront: topBar)
+        
+        qrCodeFrameView = UIView()
+        
+        if let qrCodeFrameView = qrCodeFrameView {
+            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+            qrCodeFrameView.layer.borderWidth = 2
+            view.addSubview(qrCodeFrameView)
+            view.bringSubview(toFront: qrCodeFrameView)
+        }
+        
+    }
+    func setUpCamera(){
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .unspecified)
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else {
             print("Failed to get the camera device")
             return
         }
@@ -67,26 +102,6 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             print(error)
             return
         }
-        
-        // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer!)
-        captureSession.startRunning()
-        
-        view.bringSubview(toFront: messageLabel)
-        view.bringSubview(toFront: topBar)
-        
-        qrCodeFrameView = UIView()
-        
-        if let qrCodeFrameView = qrCodeFrameView {
-            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-            qrCodeFrameView.layer.borderWidth = 2
-            view.addSubview(qrCodeFrameView)
-            view.bringSubview(toFront: qrCodeFrameView)
-        }
-        
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {

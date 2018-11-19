@@ -13,8 +13,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var foodTable: UITableView!
     
+    var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
+    
     var foods:[PFObject]! = []
     
+    var xstarted:CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +58,50 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.food = foods[indexPath.row]
         return cell
     }
+   /* @IBAction func getInfo(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "fdetailSegue", sender: sender.view)
+    }
+    
+    @IBAction func swipeDelete(_ sender: UIPanGestureRecognizer) {
+        if let cell = sender.view as? FoodCell{
+            let translation = sender.translation(in: foodTable.cellForRow(at: cell.index)?.contentView)
+            let modView = foodTable.cellForRow(at: cell.index!)?.contentView
+            
+        if(sender.state == .began){
+            
+            xstarted = sender.location(in: modView).x
+            
+        }else if(sender.state == .changed){
+            if(translation.x < 0){
+               
+                let transAmt = max(-125, Double(translation.x))
+                print(transAmt)
+                UIView.animate(withDuration: 0, animations: {
+                })
+                
+                if(translation.x < -125){
+                    cell.deleteFood(cell)
+                }
+            }
+            
+        }else if(sender.state == .ended){
+            UIView.animate(withDuration: 0.4, animations: {
+                modView?.transform = CGAffineTransform.identity
+            })
+            }
+        }else{
+            print(sender.view?.accessibilityIdentifier)
+        }
+        
+    }*/
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
-        let button1 = UIBarButtonItem(title: "Scan new food", style: .plain, target: self, action: #selector(handleNewScan))
+        let button1 = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(handleNewScan))
+        button1.setBackgroundImage(UIImage(named: "icons8-plus-30"), for: .normal, barMetrics: .default)
         self.tabBarController?.navigationItem.rightBarButtonItem = button1
+        self.tabBarController?.navigationController?.navigationBar.barTintColor = myGreen
     }
 
     override func didReceiveMemoryWarning() {

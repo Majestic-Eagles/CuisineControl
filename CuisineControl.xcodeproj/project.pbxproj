@@ -70,6 +70,7 @@
 		73DF7156216BD9CD002DE93A /* CuisineControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineControlUITests.swift; sourceTree = "<group>"; };
 		73DF7158216BD9CD002DE93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA0C74FE2190EBAB003EA1F4 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		AA48EBA421A12EE300315317 /* CuisineControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuisineControl.entitlements; sourceTree = "<group>"; };
 		AA4D406321857E7F00057DFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AA4D409F218A4EF500057DFF /* tabBarCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarCon.swift; sourceTree = "<group>"; };
 		AAFA2FFD2197EEE200AC2B16 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		73DF7140216BD9CC002DE93A /* CuisineControl */ = {
 			isa = PBXGroup;
 			children = (
+				AA48EBA421A12EE300315317 /* CuisineControl.entitlements */,
 				73DD54A32191E193003E11E6 /* Cells */,
 				73BF4D9B2181142F00561447 /* APIManagers */,
 				734365EF218113B4004153F7 /* Models */,
@@ -261,6 +263,11 @@
 				TargetAttributes = {
 					73DF713D216BD9CC002DE93A = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					73DF7151216BD9CD002DE93A = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -556,14 +563,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HSQ48H7AH6;
+				DEVELOPMENT_TEAM = 5CW63XX2DS;
 				INFOPLIST_FILE = CuisineControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taylormclaughlin.CuisineControl;
+				PRODUCT_BUNDLE_IDENTIFIER = this.computer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,14 +583,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HSQ48H7AH6;
+				DEVELOPMENT_TEAM = 5CW63XX2DS;
 				INFOPLIST_FILE = CuisineControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taylormclaughlin.CuisineControl;
+				PRODUCT_BUNDLE_IDENTIFIER = this.computer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
