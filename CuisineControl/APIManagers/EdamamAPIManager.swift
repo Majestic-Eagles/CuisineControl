@@ -43,7 +43,6 @@ class EdamamAPIManager {
                     let hintsArray = dictionary["hints"] as! NSArray
                     let foodLabelDictionary = hintsArray[0] as! [String: Any]
                     let foodDataDictionary = foodLabelDictionary["food"] as! [String: Any]
-                    //print(foodDataDictionary)
                     let newFood = Food(dictionary: foodDataDictionary, name: name, expirationDate: expirationDate, isIngredient: isIngredient)
                 } else {
                     print(error?.localizedDescription)
@@ -108,13 +107,11 @@ class EdamamAPIManager {
                             }
                             completionHandler(randomRecipeList, nil)
                         } else if let error = error {
-                            //print(error.localizedDescription)
                             completionHandler(nil, error)
                         }
                     }
                     task.resume()
                 } else if let error = error {
-                    //print(error.localizedDescription)
                     completionHandler(nil, error)
                 }
             }
