@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -292,15 +292,6 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCi-TG-mF3">
-                                                    <rect key="frame" x="296.5" y="34" width="45" height="30"/>
-                                                    <state key="normal" title="Delete">
-                                                        <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="deleteFood:" destination="UTJ-ct-rYA" eventType="touchUpInside" id="gqw-MZ-WGr"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMK-sq-QAa">
                                                     <rect key="frame" x="86" y="61" width="84" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -311,25 +302,19 @@
                                             <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstItem="uMK-sq-QAa" firstAttribute="leading" secondItem="aMp-kB-ICS" secondAttribute="trailing" constant="10" id="2Gp-MG-UdF"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ZCi-TG-mF3" secondAttribute="trailing" constant="18.5" id="3dF-rq-A5U"/>
                                                 <constraint firstItem="uMK-sq-QAa" firstAttribute="leading" secondItem="aMp-kB-ICS" secondAttribute="trailing" constant="10" id="5IM-sf-xaE"/>
                                                 <constraint firstItem="cyc-gA-9NL" firstAttribute="top" secondItem="FKx-ml-C5j" secondAttribute="topMargin" constant="6" id="9bh-1R-9am"/>
                                                 <constraint firstItem="aMp-kB-ICS" firstAttribute="leading" secondItem="FKx-ml-C5j" secondAttribute="leadingMargin" id="Etb-JU-fOw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aMp-kB-ICS" secondAttribute="bottom" constant="7" id="LPm-pj-MdG"/>
                                                 <constraint firstItem="cyc-gA-9NL" firstAttribute="leading" secondItem="FKx-ml-C5j" secondAttribute="leadingMargin" id="N0d-tG-rXD"/>
-                                                <constraint firstItem="ZCi-TG-mF3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cyc-gA-9NL" secondAttribute="trailing" constant="127" id="OG2-qw-AuD"/>
                                                 <constraint firstItem="aMp-kB-ICS" firstAttribute="top" secondItem="cyc-gA-9NL" secondAttribute="bottom" constant="8" id="bpM-OF-T3J"/>
-                                                <constraint firstItem="ZCi-TG-mF3" firstAttribute="top" secondItem="FKx-ml-C5j" secondAttribute="topMargin" constant="23" id="c3t-qo-Qqg"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="uMK-sq-QAa" secondAttribute="bottom" constant="7" id="cUf-4Q-w61"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ZCi-TG-mF3" secondAttribute="bottom" constant="25" id="lcG-d1-EZg"/>
-                                                <constraint firstItem="ZCi-TG-mF3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uMK-sq-QAa" secondAttribute="trailing" constant="35.5" id="oay-yp-Rlu"/>
                                                 <constraint firstItem="aMp-kB-ICS" firstAttribute="top" secondItem="cyc-gA-9NL" secondAttribute="bottom" constant="8" id="vWw-Sf-elc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outlet property="deleteButton" destination="ZCi-TG-mF3" id="xHa-qr-4Ii"/>
                                             <outlet property="expireDate" destination="uMK-sq-QAa" id="kpp-x0-qBx"/>
                                             <outlet property="nameLab" destination="cyc-gA-9NL" id="7ck-jW-wTZ"/>
                                             <segue destination="eRG-Hc-Y5z" kind="show" identifier="fdetailSegue" id="4Za-9r-NbC"/>

@@ -26,7 +26,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         foodTable.delegate = self
         print("Foods that belong to \(PFUser.current()?.username!)")
         getFoods()
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getFoods), userInfo: nil, repeats: true)
+        
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
@@ -46,6 +46,21 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
             })
         }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            
+            let cell = self.foodTable.cellForRow(at: indexPath) as? FoodCell
+            let food = cell?.food
+            food?.deleteInBackground(block: {(succes, error) in
+                if(succes){
+                    self.getFoods()
+                }else{
+                    print(error?.localizedDescription)
+                }
+            })
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
