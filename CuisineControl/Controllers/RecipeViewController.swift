@@ -70,7 +70,6 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
                 if let recipes = recipes {
                     self.shadowView?.isHidden = true
                     self.loadingView!.stopAnimating()
-                    print("working")
                     self.recipes = recipes
                     self.recipeTableView.reloadData()
                 } else if let error = error {

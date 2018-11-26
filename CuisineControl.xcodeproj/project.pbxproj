@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08A18AF6381A7458A578A699 /* Pods_CuisineControlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB719E61D7326B698F9E6CA /* Pods_CuisineControlUITests.framework */; };
+		7338C38321A1218500EC6994 /* FavoriteRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338C38221A1218500EC6994 /* FavoriteRecipesViewController.swift */; };
 		73419A5E218780E6006AED06 /* BarCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73419A5D218780E6006AED06 /* BarCodeScannerViewController.swift */; };
 		73419A8E218A0531006AED06 /* UPCItemAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73419A8D218A0531006AED06 /* UPCItemAPIManager.swift */; };
 		73419A90218B981E006AED06 /* SpoonacularAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73419A8F218B981E006AED06 /* SpoonacularAPIManager.swift */; };
@@ -46,6 +47,7 @@
 		1603117BF1AD734E7AC529F3 /* Pods-CuisineControlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuisineControlUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuisineControlUITests/Pods-CuisineControlUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1AB719E61D7326B698F9E6CA /* Pods_CuisineControlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuisineControlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3A5BEAA7BC4D1A7C8FD478 /* Pods-CuisineControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuisineControlUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuisineControlUITests/Pods-CuisineControlUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7338C38221A1218500EC6994 /* FavoriteRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewController.swift; sourceTree = "<group>"; };
 		73419A5D218780E6006AED06 /* BarCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeScannerViewController.swift; sourceTree = "<group>"; };
 		73419A8D218A0531006AED06 /* UPCItemAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCItemAPIManager.swift; sourceTree = "<group>"; };
 		73419A8F218B981E006AED06 /* SpoonacularAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPIManager.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				AA4D406321857E7F00057DFF /* MainViewController.swift */,
 				AA4D409F218A4EF500057DFF /* tabBarCon.swift */,
 				AAFA300121A07FF100AC2B16 /* fdetailViewController.swift */,
+				7338C38221A1218500EC6994 /* FavoriteRecipesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				73DD54A12191E186003E11E6 /* RecipeCell.swift */,
+				AAFA2FFD2197EEE200AC2B16 /* FoodCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -178,7 +182,6 @@
 				734365EF218113B4004153F7 /* Models */,
 				734365EE2181139C004153F7 /* Controllers */,
 				73DF7141216BD9CC002DE93A /* AppDelegate.swift */,
-				AAFA2FFD2197EEE200AC2B16 /* FoodCell.swift */,
 				73DF7145216BD9CC002DE93A /* Main.storyboard */,
 				73DF7148216BD9CD002DE93A /* Assets.xcassets */,
 				73DF714A216BD9CD002DE93A /* LaunchScreen.storyboard */,
@@ -263,6 +266,9 @@
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -381,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7338C38321A1218500EC6994 /* FavoriteRecipesViewController.swift in Sources */,
 				73BF4D9D2181147A00561447 /* EdamamAPIManager.swift in Sources */,
 				AAFA2FFE2197EEE200AC2B16 /* FoodCell.swift in Sources */,
 				73BF4D9F218114C200561447 /* Food.swift in Sources */,
@@ -558,14 +565,16 @@
 			baseConfigurationReference = E8C9CD1F573CA535D0FDF90F /* Pods-CuisineControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CuisineControl/CuisineControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CW63XX2DS;
+				DEVELOPMENT_TEAM = HSQ48H7AH6;
 				INFOPLIST_FILE = CuisineControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = this.computer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taylormclaughlin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -577,14 +586,16 @@
 			baseConfigurationReference = 737908B4C1F53B4CCD31ABC7 /* Pods-CuisineControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CuisineControl/CuisineControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CW63XX2DS;
+				DEVELOPMENT_TEAM = HSQ48H7AH6;
 				INFOPLIST_FILE = CuisineControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = this.computer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taylormclaughlin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
