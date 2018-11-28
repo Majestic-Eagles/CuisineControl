@@ -16,17 +16,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
     
     var foods:[PFObject]! = []
-    
+    var refresh : UIRefreshControl!
     var xstarted:CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(getFoods), for: .valueChanged)
+        foodTable.insertSubview(refresh, at: 0)
         
         foodTable.dataSource = self
         foodTable.delegate = self
         print("Foods that belong to \(PFUser.current()?.username!)")
         getFoods()
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getFoods), userInfo: nil, repeats: true)
+        
         //let upc = "0638102201010"
         //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
         //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
@@ -39,13 +42,31 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             query.whereKey("user", equalTo: user)
             query.findObjectsInBackground(block: {(foods, error) in
                 if let foods = foods{
-                    self.foods = foods
-                    self.foodTable.reloadData()
+                    if(foods != self.foods){
+                        self.foods = foods
+                        self.foodTable.reloadData()
+                        self.refresh.endRefreshing()
+                    }
                 }else if let error = error{
                     print(error.localizedDescription)
                 }
             })
         }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            
+            let cell = self.foodTable.cellForRow(at: indexPath) as? FoodCell
+            let food = cell?.food
+            food?.deleteInBackground(block: {(succes, error) in
+                if(succes){
+                    self.getFoods()
+                }else{
+                    print(error?.localizedDescription)
+                }
+            })
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
