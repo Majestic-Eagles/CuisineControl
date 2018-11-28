@@ -16,11 +16,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
     
     var foods:[PFObject]! = []
-    
+    var refresh : UIRefreshControl!
     var xstarted:CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(getFoods), for: .valueChanged)
+        foodTable.insertSubview(refresh, at: 0)
         
         foodTable.dataSource = self
         foodTable.delegate = self
@@ -39,8 +42,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             query.whereKey("user", equalTo: user)
             query.findObjectsInBackground(block: {(foods, error) in
                 if let foods = foods{
-                    self.foods = foods
-                    self.foodTable.reloadData()
+                    if(foods != self.foods){
+                        self.foods = foods
+                        self.foodTable.reloadData()
+                        self.refresh.endRefreshing()
+                    }
                 }else if let error = error{
                     print(error.localizedDescription)
                 }
