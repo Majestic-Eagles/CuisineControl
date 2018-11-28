@@ -14,11 +14,14 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-    EdamamAPIManager.shared.getFoodData(foodString: "zone fudge gram protein bar")
+        view.backgroundColor = myGreen
+        //EdamamAPIManager.shared.getFoodData(foodString: "zone fudge gram protein bar")
         
     }
 

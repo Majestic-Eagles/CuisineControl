@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="qH8-uw-oXI">
+            <objects>
+                <viewController id="r8y-gr-Pw8" customClass="LandingViewController" customModule="CuisineControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ttc-PD-B9T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SALMON" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-U8-mdT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YSg-U8-mdT" firstAttribute="trailing" secondItem="OEv-LC-zGQ" secondAttribute="trailing" id="afk-Pc-xf8"/>
+                            <constraint firstItem="YSg-U8-mdT" firstAttribute="leading" secondItem="OEv-LC-zGQ" secondAttribute="leading" id="g78-yI-o45"/>
+                            <constraint firstAttribute="bottom" secondItem="YSg-U8-mdT" secondAttribute="bottom" id="ifa-ay-Uve"/>
+                            <constraint firstItem="YSg-U8-mdT" firstAttribute="top" secondItem="Ttc-PD-B9T" secondAttribute="top" id="vdI-pC-tVy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OEv-LC-zGQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="YSg-U8-mdT" id="iwu-ys-CVX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLi-Ji-h7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743.20000000000005" y="116.49175412293854"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -62,8 +91,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xM6-Qf-KyQ">
+                                <rect key="frame" x="164" y="376" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="r8y-gr-Pw8" kind="show" id="HvM-on-Hgb"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.2784313725" green="0.89019607840000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.47843137254901963" green="0.87450980392156863" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
@@ -369,7 +406,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-Db-grg">
-                                <rect key="frame" x="138" y="97" width="99" height="51"/>
+                                <rect key="frame" x="138" y="141" width="99" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -377,7 +414,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9w-4g-yic">
-                                <rect key="frame" x="66" y="150" width="240" height="174"/>
+                                <rect key="frame" x="66" y="194" width="240" height="174"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3I-gZ-LiU">
                                         <rect key="frame" x="4" y="4" width="232" height="166"/>
@@ -902,12 +939,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SALMON" width="650" height="980"/>
         <image name="cross" width="16" height="16"/>
         <image name="icons8-ingredients-30" width="30" height="30"/>
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YDA-VS-ppy"/>
-        <segue reference="Qts-iW-URU"/>
+        <segue reference="P8N-mA-FgR"/>
     </inferredMetricsTieBreakers>
 </document>
