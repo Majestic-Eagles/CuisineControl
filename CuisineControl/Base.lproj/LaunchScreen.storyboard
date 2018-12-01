@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SALMON" translatesAutoresizingMaskIntoConstraints="NO" id="gTy-uI-sfv">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SALMON" translatesAutoresizingMaskIntoConstraints="NO" id="gTy-uI-sfv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gTy-uI-sfv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lyh-3P-o0v"/>
-                            <constraint firstItem="gTy-uI-sfv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y0k-Kg-ukQ"/>
-                            <constraint firstItem="gTy-uI-sfv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="i22-gT-RfF"/>
-                            <constraint firstItem="gTy-uI-sfv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iUg-MH-gVT"/>
+                            <constraint firstAttribute="bottom" secondItem="gTy-uI-sfv" secondAttribute="bottom" id="0wj-Cu-A6K"/>
+                            <constraint firstItem="gTy-uI-sfv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4NA-C0-eR7"/>
+                            <constraint firstItem="gTy-uI-sfv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="coS-Kb-uK8"/>
+                            <constraint firstAttribute="trailing" secondItem="gTy-uI-sfv" secondAttribute="trailing" id="u5t-gU-R32"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

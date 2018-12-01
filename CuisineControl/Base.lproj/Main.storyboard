@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SALMON" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-U8-mdT">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SALMON" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-U8-mdT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,14 +68,10 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YSg-U8-mdT" firstAttribute="trailing" secondItem="OEv-LC-zGQ" secondAttribute="trailing" id="3Vd-pn-naX"/>
-                            <constraint firstItem="YSg-U8-mdT" firstAttribute="top" secondItem="Ttc-PD-B9T" secondAttribute="top" id="FeA-mD-6iw"/>
                             <constraint firstItem="PUv-P7-1pw" firstAttribute="leading" secondItem="OEv-LC-zGQ" secondAttribute="leading" id="Gpx-8F-69d"/>
-                            <constraint firstItem="YSg-U8-mdT" firstAttribute="leading" secondItem="OEv-LC-zGQ" secondAttribute="leading" id="Lcq-sw-ZxE"/>
                             <constraint firstItem="PUv-P7-1pw" firstAttribute="top" secondItem="YSg-U8-mdT" secondAttribute="bottom" constant="34" id="Xlp-lo-uha"/>
-                            <constraint firstItem="YSg-U8-mdT" firstAttribute="trailing" secondItem="OEv-LC-zGQ" secondAttribute="trailing" id="afk-Pc-xf8"/>
                             <constraint firstItem="PUv-P7-1pw" firstAttribute="trailing" secondItem="OEv-LC-zGQ" secondAttribute="trailing" id="bXi-jJ-kC7"/>
                             <constraint firstItem="YSg-U8-mdT" firstAttribute="leading" secondItem="OEv-LC-zGQ" secondAttribute="leading" id="g78-yI-o45"/>
-                            <constraint firstAttribute="bottom" secondItem="YSg-U8-mdT" secondAttribute="bottom" id="ifa-ay-Uve"/>
                             <constraint firstItem="YSg-U8-mdT" firstAttribute="top" secondItem="Ttc-PD-B9T" secondAttribute="top" id="vdI-pC-tVy"/>
                             <constraint firstAttribute="bottom" secondItem="YSg-U8-mdT" secondAttribute="bottom" id="yQz-CA-onp"/>
                         </constraints>
@@ -1002,7 +998,7 @@
         <image name="icons8-restaurant-menu-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qts-iW-URU"/>
+        <segue reference="P8N-mA-FgR"/>
         <segue reference="vsg-Zc-ixQ"/>
     </inferredMetricsTieBreakers>
 </document>
