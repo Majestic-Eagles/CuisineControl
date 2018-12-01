@@ -20,7 +20,14 @@ class CreateAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    func makePretty(){
+        let black = UIColor(white: 0, alpha: 0.4).cgColor as CGColor
+        emailField.layer.borderWidth = 1
+        emailField.layer.borderColor = black
+        nameField.layer.borderWidth = 1
+        nameField.layer.borderColor = black
+        passwordField.layer.borderW
+    }
     /*
     // MARK: - Navigation
 
