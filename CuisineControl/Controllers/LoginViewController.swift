@@ -18,12 +18,17 @@ class LoginViewController: UIViewController {
     let myGreen = UIColor(red: 30, green: 224, blue: 121, alpha: 1)
     
     
+    @IBOutlet weak var signInBut: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameField.layer.borderWidth = 1
+        usernameField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        passwordField.layer.borderWidth = 1
+        passwordField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        signInBut.layer.cornerRadius = 5
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.backgroundColor = UIColor(red: 30, green: 224, blue: 121, alpha: 1)
-        //view.backgroundColor = EdamamAPIManager.shared.myGreen
+
         //EdamamAPIManager.shared.getFoodData(foodString: "zone fudge gram protein bar")
         
     }
