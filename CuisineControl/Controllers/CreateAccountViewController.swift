@@ -26,7 +26,7 @@ class CreateAccountViewController: UIViewController {
         emailField.layer.borderColor = black
         nameField.layer.borderWidth = 1
         nameField.layer.borderColor = black
-        passwordField.layer.borderW
+        //passwordField.layer.borderWidth
     }
     /*
     // MARK: - Navigation
