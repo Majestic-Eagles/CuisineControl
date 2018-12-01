@@ -11,6 +11,8 @@ import Parse
 
 class EdamamAPIManager {
     
+    var myGreen = UIColor(red: 30, green: 224, blue: 121, alpha: 1)
+    
     let foodDatabaseApplicationID = "700a667e"
     let foodDatabaseApplicationKey = "12c0086d319c5d974cfc2a3182e14058"
     let searchApplicationID = "832f958b"
