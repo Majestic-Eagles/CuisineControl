@@ -13,7 +13,6 @@ class tabBarCon: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 40, green: 227, blue: 71, alpha: 1)
         // Do any additional setup after loading the view.
     }
 

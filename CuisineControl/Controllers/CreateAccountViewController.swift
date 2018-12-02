@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -16,8 +17,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        makePretty()
     }
     
     func makePretty(){
@@ -26,16 +26,41 @@ class CreateAccountViewController: UIViewController {
         emailField.layer.borderColor = black
         nameField.layer.borderWidth = 1
         nameField.layer.borderColor = black
-        passwordField.layer.borderW
+        passwordField.layer.borderWidth = 1
+        passwordField.layer.borderColor = black
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func signUp(_ sender: Any) {
+        let newUser = PFUser()
+        if(nameField.text! == "" || passwordField.text! == "" || emailField.text! == ""){
+            let misingInputalert = UIAlertController(title: "Missing Input", message: "Username or password is empty", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in }
+            misingInputalert.addAction(OKAction)
+            present(misingInputalert, animated: true)
+        }else{
+            
+            // set user properties
+            newUser.username = emailField.text
+            newUser.password = passwordField.text
+            newUser.email = emailField.text
+            
+            // call sign up function on the object
+            newUser.signUpInBackground { (success: Bool, error: Error?) in
+                if let error = error {
+                    let errorAlert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                        
+                    }
+                    errorAlert.addAction(OKAction)
+                    
+                    self.present(errorAlert, animated: true)
+                } else {
+                    print("User Registered successfully")
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    // manually segue to logged in view
+                }
+            }
+        }
     }
-    */
-
+    
 }
