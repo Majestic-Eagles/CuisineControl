@@ -38,7 +38,7 @@ class LandingViewController: UIViewController {
          destinationViewController.transitioningDelegate = fadeTrans
             
             // Adjust the transition duration. (seconds)
-            fadeTrans.duration = 1
+            fadeTrans.duration = 0.7
             
         
     }
