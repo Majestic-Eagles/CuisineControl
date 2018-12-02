@@ -17,6 +17,7 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
     var upc: String?
+    var fadeTrans: FadeTransition!
     
     @IBAction func onCancel(_ sender: Any) {
         self.performSegue(withIdentifier: "FinishedScannerSegue", sender: nil)
@@ -133,6 +134,14 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FoodScannedSegue" {
             let newFoodViewController = segue.destination as! NewFoodViewController
+           newFoodViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+            
+            fadeTrans = FadeTransition()
+            newFoodViewController.transitioningDelegate = fadeTrans
+            
+            // Adjust the transition duration. (seconds)
+            fadeTrans.duration = 0.7
+            
             newFoodViewController.upc = self.upc
         }
     }
