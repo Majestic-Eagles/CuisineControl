@@ -62,7 +62,9 @@ The following **required** functionality is completed:
 - [X] User can delete a food from their food list (also deletes food from Parse)
 
 The following **stretch** features are implemented:
-
+- [X] User is greeted with a pretty login/signup screen
+- [X] User can add foods manually
+- [X] Login/signup screens have activity indicators.
 - [ ] User can specify what type of recipe they want, i.e. Mexican or Thai
 - [ ] User can keep certain foods out of the recipe, i.e. remove eggs from potential random recipes even though the user has eggs
 - [ ] User add recipes to the random recipe generator
