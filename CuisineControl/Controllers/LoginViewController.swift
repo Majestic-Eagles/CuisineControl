@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     
-    let myGreen = UIColor(red: 30, green: 224, blue: 121, alpha: 1)
+     var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
     
     
     @IBOutlet weak var signInBut: UIButton!
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         usernameField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
         passwordField.layer.borderWidth = 1
         passwordField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
-            signInBut.backgroundColor = myGreen
+        signInBut.backgroundColor = myGreen
     }
 
     override func didReceiveMemoryWarning() {

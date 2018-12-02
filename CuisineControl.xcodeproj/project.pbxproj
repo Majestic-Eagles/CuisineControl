@@ -32,6 +32,7 @@
 		AA4A91BD21B3502F003D6E09 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A91BC21B3502F003D6E09 /* CreateAccountViewController.swift */; };
 		AA4D406421857E7F00057DFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D406321857E7F00057DFF /* MainViewController.swift */; };
 		AA4D40A0218A4EF500057DFF /* tabBarCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D409F218A4EF500057DFF /* tabBarCon.swift */; };
+		AAEC90BE21B37AA200C98FA3 /* ManualFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC90BD21B37AA200C98FA3 /* ManualFoodViewController.swift */; };
 		AAFA2FFE2197EEE200AC2B16 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA2FFD2197EEE200AC2B16 /* FoodCell.swift */; };
 		AAFA300221A07FF100AC2B16 /* fdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA300121A07FF100AC2B16 /* fdetailViewController.swift */; };
 		BA355CBB14A746006CD61974 /* Pods_CuisineControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E391E9EABD67EA07EA9234 /* Pods_CuisineControl.framework */; };
@@ -81,6 +82,7 @@
 		AA4A91BC21B3502F003D6E09 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		AA4D406321857E7F00057DFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AA4D409F218A4EF500057DFF /* tabBarCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarCon.swift; sourceTree = "<group>"; };
+		AAEC90BD21B37AA200C98FA3 /* ManualFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualFoodViewController.swift; sourceTree = "<group>"; };
 		AAFA2FFD2197EEE200AC2B16 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		AAFA300121A07FF100AC2B16 /* fdetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fdetailViewController.swift; sourceTree = "<group>"; };
 		E8C9CD1F573CA535D0FDF90F /* Pods-CuisineControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuisineControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuisineControl/Pods-CuisineControl.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				AAFA300121A07FF100AC2B16 /* fdetailViewController.swift */,
 				7338C38221A1218500EC6994 /* FavoriteRecipesViewController.swift */,
 				AA4A91BC21B3502F003D6E09 /* CreateAccountViewController.swift */,
+				AAEC90BD21B37AA200C98FA3 /* ManualFoodViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				AA4D406421857E7F00057DFF /* MainViewController.swift in Sources */,
 				73419A5E218780E6006AED06 /* BarCodeScannerViewController.swift in Sources */,
 				AA4A91BD21B3502F003D6E09 /* CreateAccountViewController.swift in Sources */,
+				AAEC90BE21B37AA200C98FA3 /* ManualFoodViewController.swift in Sources */,
 				7334089721A79B640022B5C0 /* LandingViewController.swift in Sources */,
 				73419A92218D0E1E006AED06 /* NewFoodViewController.swift in Sources */,
 				73DF7142216BD9CC002DE93A /* AppDelegate.swift in Sources */,
