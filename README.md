@@ -80,7 +80,7 @@ Here's a walkthrough of implemented user stories:
 <img src='https://imgur.com/kk5FF0D.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://image.ibb.co/iHTQLA/CCRemake.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-*Most up to date Gif*
+*Most up to date Gif*<br>
 <img src='https://i.ibb.co/cLFWDgm/CCFinal.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
