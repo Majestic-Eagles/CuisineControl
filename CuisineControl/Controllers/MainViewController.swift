@@ -13,7 +13,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var foodTable: UITableView!
     
-    var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
+    var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
     
     var foods:[PFObject]! = []
     var refresh : UIRefreshControl!
@@ -30,10 +30,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("Foods that belong to \(PFUser.current()?.username!)")
         getFoods()
         
-        //let upc = "0638102201010"
-        //SpoonacularAPIManager.shared.getFoodDataWithUPC(upc: upc)
-        //EdamamAPIManager.shared.getFoodDataWithUPC(upc: upc)
-        //UPCItemAPIManager.shared.getUPC(UPC: upc)
         
     }
     @objc func getFoods(){
@@ -120,7 +116,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidAppear(_ animated: Bool) {
         let button1 = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(handleNewScan))
-        button1.setBackgroundImage(UIImage(named: "icons8-plus-30"), for: .normal, barMetrics: .default)
+        button1.setBackgroundImage(UIImage(named: "icons8-barcode-26"), for: .normal, barMetrics: .default)
         self.tabBarController?.navigationItem.rightBarButtonItem = button1
         self.tabBarController?.navigationController?.navigationBar.barTintColor = myGreen
     }

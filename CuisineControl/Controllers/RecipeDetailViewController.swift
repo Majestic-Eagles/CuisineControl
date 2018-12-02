@@ -25,7 +25,14 @@ class RecipeDetailViewController: UIViewController {
         recipeImageView.af_setImage(withURL: (recipe?.recipeImageURL)!)
         recipeTitleLabel.text = recipe?.name
         ingredientsListLabel.text = recipe?.ingredients
-        recipeButton.backgroundColor = EdamamAPIManager.shared.myGreen
+        recipeButton.setTitle("View Recipe", for: .normal)
+        recipeButton.tintColor = UIColor.white
+        recipeButton.layer.cornerRadius = 5
+        recipeButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        recipeButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        recipeButton.layer.shadowOpacity = 1.0
+        recipeButton.layer.shadowRadius = 0.0
+        recipeButton.layer.masksToBounds = false
         
     }
     
