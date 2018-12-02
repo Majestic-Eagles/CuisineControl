@@ -140,7 +140,7 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             newFoodViewController.transitioningDelegate = fadeTrans
             
             // Adjust the transition duration. (seconds)
-            fadeTrans.duration = 0.7
+            fadeTrans.duration = 0.3
             
             newFoodViewController.upc = self.upc
         }

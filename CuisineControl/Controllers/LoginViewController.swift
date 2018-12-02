@@ -14,14 +14,15 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
      var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
-    
     
     @IBOutlet weak var signInBut: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         makePretty()
+        loading.transform = CGAffineTransform(scaleX: 3, y: 3)
     }
     
     func makePretty(){
@@ -46,12 +47,14 @@ class LoginViewController: UIViewController {
             misingInputalert.addAction(OKAction)
             present(misingInputalert, animated: true)
         }else{
+            loading.startAnimating()
             let usernameT = usernameField.text ?? ""
             let passwordT = passwordField.text ?? ""
             
             PFUser.logInWithUsername(inBackground: usernameT , password: passwordT)
             { (user: PFUser?, error: Error?) in
                 if let error = error {
+                    self.loading.stopAnimating()
                     let errorAlert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle: .alert)
                     let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
                         
@@ -61,6 +64,7 @@ class LoginViewController: UIViewController {
                     self.present(errorAlert, animated: true)
                 } else {
                     print("User logged in successfully")
+                    self.loading.stopAnimating()
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                     // display view controller that needs to shown after successful login
                 }

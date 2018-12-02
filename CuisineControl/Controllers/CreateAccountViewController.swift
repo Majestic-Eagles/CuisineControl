@@ -14,12 +14,14 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var cAccountBut: UIButton!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makePretty()
+        loader.transform = CGAffineTransform(scaleX: 3, y: 3)
     }
     
     func makePretty(){
@@ -36,8 +38,10 @@ class CreateAccountViewController: UIViewController {
     }
 
     @IBAction func signUp(_ sender: Any) {
+        loader.startAnimating()
         let newUser = PFUser()
         if(nameField.text! == "" || passwordField.text! == "" || emailField.text! == ""){
+            loader.stopAnimating()
             let misingInputalert = UIAlertController(title: "Missing Input", message: "Username or password is empty", preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in }
             misingInputalert.addAction(OKAction)
@@ -52,6 +56,7 @@ class CreateAccountViewController: UIViewController {
             // call sign up function on the object
             newUser.signUpInBackground { (success: Bool, error: Error?) in
                 if let error = error {
+                    self.loader.stopAnimating()
                     let errorAlert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle: .alert)
                     let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
                         
@@ -61,6 +66,7 @@ class CreateAccountViewController: UIViewController {
                     self.present(errorAlert, animated: true)
                 } else {
                     print("User Registered successfully")
+                    self.loader.stopAnimating()
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                     // manually segue to logged in view
                 }
