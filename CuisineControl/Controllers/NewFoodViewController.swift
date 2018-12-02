@@ -14,6 +14,7 @@ class NewFoodViewController: UIViewController {
     @IBOutlet weak var expirationDateTextField: UITextField!
     @IBOutlet weak var ingredientSegmentedController: UISegmentedControl!
     
+    @IBOutlet weak var subFoodButt: UIButton!
     var upc: String?
     
     private var datePicker = UIDatePicker()
@@ -36,7 +37,7 @@ class NewFoodViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        makePretty()
         datePicker.datePickerMode = .date
         datePicker.addTarget(self, action: #selector(NewFoodViewController.dateChanged(datePicker:)), for: .valueChanged)
         
@@ -44,6 +45,10 @@ class NewFoodViewController: UIViewController {
         ingredientSegmentedController.selectedSegmentIndex = -1
 
         // Do any additional setup after loading the view.
+    }
+    func makePretty(){
+        foodNameTextField.layer.borderWidth = 0
+        subFoodButt.layer.cornerRadius = 5
     }
     
     @objc func dateChanged(datePicker: UIDatePicker) {

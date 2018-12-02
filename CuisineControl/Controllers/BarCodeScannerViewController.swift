@@ -12,7 +12,7 @@ import AVFoundation
 class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var topBar: UIView!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var addManBut: UIButton!
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
@@ -62,8 +62,8 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
         view.layer.addSublayer(videoPreviewLayer!)
         captureSession.startRunning()
         
-        view.bringSubview(toFront: messageLabel)
         view.bringSubview(toFront: topBar)
+        view.bringSubview(toFront: addManBut)
         
         qrCodeFrameView = UIView()
         
@@ -121,7 +121,7 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+                
                 upc = metadataObj.stringValue
                 //EdamamAPIManager.shared.getFoodDataWithUPC(upc: metadataObj.stringValue!)
                 self.performSegue(withIdentifier: "FoodScannedSegue", sender: nil)
