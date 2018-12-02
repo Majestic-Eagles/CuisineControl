@@ -41,7 +41,7 @@ class BarCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObj
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*A*/
+        addManBut.layer.cornerRadius = 5
         if(AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined){
             AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted) in
                 if granted{
