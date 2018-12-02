@@ -22,6 +22,7 @@ class fdetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNutrionLabels()
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         // Do any additional setup after loading the view.
     }
     func setNutrionLabels(){

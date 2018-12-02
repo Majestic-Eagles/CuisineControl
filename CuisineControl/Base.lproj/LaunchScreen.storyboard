@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine Control" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogT-2R-L9j">
-                                <rect key="frame" x="8" y="148.5" width="359" height="177"/>
+                                <rect key="frame" x="8" y="120" width="359" height="177"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="75"/>
                                 <color key="textColor" red="0.1176470588" green="0.87843137250000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                             <constraint firstItem="gTy-uI-sfv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4NA-C0-eR7"/>
                             <constraint firstAttribute="trailing" secondItem="ogT-2R-L9j" secondAttribute="trailing" constant="8" id="BPO-qB-bfY"/>
                             <constraint firstItem="ogT-2R-L9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="GE9-Uc-SH5"/>
-                            <constraint firstItem="Qyz-eC-ldO" firstAttribute="top" secondItem="ogT-2R-L9j" secondAttribute="bottom" constant="8" id="Nfg-Ef-LMK"/>
+                            <constraint firstItem="ogT-2R-L9j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="arc-b1-DSh"/>
                             <constraint firstItem="gTy-uI-sfv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="coS-Kb-uK8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qyz-eC-ldO" secondAttribute="trailing" constant="8" id="mMN-bC-cI6"/>
                             <constraint firstItem="Qyz-eC-ldO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="o5Z-3R-PwV"/>
