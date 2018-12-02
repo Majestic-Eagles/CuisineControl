@@ -21,7 +21,7 @@ class RecipeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       self.navigationController?.navigationBar.tintColor = UIColor.black
         recipeImageView.af_setImage(withURL: (recipe?.recipeImageURL)!)
         recipeTitleLabel.text = recipe?.name
         ingredientsListLabel.text = recipe?.ingredients

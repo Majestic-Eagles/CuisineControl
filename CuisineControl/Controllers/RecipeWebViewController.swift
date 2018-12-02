@@ -24,10 +24,12 @@ class RecipeWebViewController: UIViewController, WKUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         let recipeURL = recipe?.recipeURL
         let request = URLRequest(url: recipeURL!)
         recipeWebView.load(request)
+        
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.black
         
     }
 
