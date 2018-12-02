@@ -21,11 +21,22 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SALMON" translatesAutoresizingMaskIntoConstraints="NO" id="gTy-uI-sfv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine Control" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogT-2R-L9j">
+                                <rect key="frame" x="8" y="245" width="359" height="177"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="75"/>
+                                <color key="textColor" red="0.1176470588" green="0.87843137250000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="gTy-uI-sfv" secondAttribute="bottom" id="0wj-Cu-A6K"/>
                             <constraint firstItem="gTy-uI-sfv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4NA-C0-eR7"/>
+                            <constraint firstAttribute="trailing" secondItem="ogT-2R-L9j" secondAttribute="trailing" constant="8" id="BPO-qB-bfY"/>
+                            <constraint firstItem="ogT-2R-L9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="GE9-Uc-SH5"/>
+                            <constraint firstItem="ogT-2R-L9j" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Y2e-Ll-VF0"/>
                             <constraint firstItem="gTy-uI-sfv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="coS-Kb-uK8"/>
                             <constraint firstAttribute="trailing" secondItem="gTy-uI-sfv" secondAttribute="trailing" id="u5t-gU-R32"/>
                         </constraints>

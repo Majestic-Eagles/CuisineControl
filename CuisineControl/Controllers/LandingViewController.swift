@@ -15,6 +15,7 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var buttonsView: UIView!
     @IBOutlet weak var createAccount: UIButton!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var landingText: UILabel!
     
     var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
     var fadeTrans: FadeTransition!
