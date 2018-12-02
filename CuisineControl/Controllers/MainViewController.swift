@@ -15,7 +15,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
     
-    var foods:[PFObject]! = []
+    var foods:[PFObject] = []
     var refresh : UIRefreshControl!
     var xstarted:CGFloat?
     
@@ -28,10 +28,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         foodTable.dataSource = self
         foodTable.delegate = self
         print("Foods that belong to \(PFUser.current()?.username!)")
-        getFoods()
-        
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getFoods()
+    }
+    
     @objc func getFoods(){
         let query = PFQuery(className: "Foods")
         if let user = PFUser.current(){
