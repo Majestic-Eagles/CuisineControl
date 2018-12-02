@@ -15,6 +15,8 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var cAccountBut: UIButton!
     
+    var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makePretty()
@@ -29,6 +31,7 @@ class CreateAccountViewController: UIViewController {
 
         passwordField.layer.borderWidth = 1
         passwordField.layer.borderColor = black
+        cAccountBut.backgroundColor = myGreen
 
     }
 

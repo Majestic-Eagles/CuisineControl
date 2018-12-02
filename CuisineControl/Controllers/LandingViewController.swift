@@ -16,14 +16,14 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var createAccount: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
-    var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
+    var myGreen = UIColor(red: 30/255, green: 224/255, blue: 121/255, alpha: 1)
     var fadeTrans: FadeTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         set_up()
         UIView.animate(withDuration: 1, animations: {
-            self.buttonsView.transform = CGAffineTransform(translationX: 0, y: -250)
+            self.buttonsView.transform = CGAffineTransform(translationX: 0, y: -200)
         })
         
  

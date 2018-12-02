@@ -11,8 +11,10 @@ import Parse
 
 class tabBarCon: UITabBarController {
 
+    @IBOutlet weak var logOutBut: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        logOutBut.tintColor = UIColor(white: 0, alpha: 1)
         // Do any additional setup after loading the view.
     }
 
