@@ -14,15 +14,18 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var ingredientsListLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var recipeButton: UIButton!
     
     var recipe: Recipe?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         recipeImageView.af_setImage(withURL: (recipe?.recipeImageURL)!)
         recipeTitleLabel.text = recipe?.name
         ingredientsListLabel.text = recipe?.ingredients
+        recipeButton.backgroundColor = EdamamAPIManager.shared.myGreen
         
     }
     

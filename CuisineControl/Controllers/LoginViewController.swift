@@ -14,7 +14,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
-    var myGreen = UIColor(red: 71/255, green: 227/255, blue: 40/255, alpha: 1)
+    
+    let myGreen = UIColor(red: 30, green: 224, blue: 121, alpha: 1)
+    
     
     @IBOutlet weak var signInBut: UIButton!
     override func viewDidLoad() {

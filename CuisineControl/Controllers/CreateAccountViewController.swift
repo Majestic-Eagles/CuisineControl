@@ -26,8 +26,10 @@ class CreateAccountViewController: UIViewController {
         emailField.layer.borderColor = black
         nameField.layer.borderWidth = 1
         nameField.layer.borderColor = black
+
         passwordField.layer.borderWidth = 1
         passwordField.layer.borderColor = black
+
     }
 
     @IBAction func signUp(_ sender: Any) {
