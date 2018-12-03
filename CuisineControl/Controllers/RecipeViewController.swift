@@ -12,6 +12,7 @@ import NVActivityIndicatorView
 
 class RecipeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     var recipes: [Recipe] = []
     var loadingView: NVActivityIndicatorView?
     var shadowView: UIView?
@@ -32,7 +33,8 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loader.alpha = 0
+        loader.transform = CGAffineTransform(scaleX: 3, y: 3)
         recipeTableView.delegate = self
         recipeTableView.dataSource = self
         
@@ -64,6 +66,8 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @objc func handleRandomRecipe() {
+        loader.startAnimating()
+        loader.alpha = 1
         if let user = PFUser.current(){
             //self.shadowView?.isHidden = false
             //loadingView!.startAnimating()
@@ -73,8 +77,12 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
                     //self.loadingView!.stopAnimating()
                     self.recipes = recipes
                     self.recipeTableView.reloadData()
+                    self.loader.stopAnimating()
+                    self.loader.alpha = 0
                 } else if let error = error {
                     print(error.localizedDescription)
+                    self.loader.stopAnimating()
+                    self.loader.alpha = 0
                 }
             }
         }

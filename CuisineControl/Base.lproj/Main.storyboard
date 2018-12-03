@@ -1303,18 +1303,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="F0f-hA-hfk">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <color key="tintColor" red="0.1176470588" green="0.87843137250000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.1176470588" green="0.87843137250000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="F0f-hA-hfk" firstAttribute="centerX" secondItem="kBy-lS-blW" secondAttribute="centerX" id="6Qz-CQ-i1p"/>
                             <constraint firstItem="r4b-7E-SXQ" firstAttribute="top" secondItem="xKG-ge-cOR" secondAttribute="top" id="BLw-hb-Pv7"/>
                             <constraint firstItem="r4b-7E-SXQ" firstAttribute="leading" secondItem="xKG-ge-cOR" secondAttribute="leading" id="I4d-ch-isJ"/>
                             <constraint firstItem="r4b-7E-SXQ" firstAttribute="trailing" secondItem="xKG-ge-cOR" secondAttribute="trailing" id="Mb0-HP-df4"/>
                             <constraint firstItem="r4b-7E-SXQ" firstAttribute="bottom" secondItem="xKG-ge-cOR" secondAttribute="bottom" id="fbK-aW-imp"/>
+                            <constraint firstItem="F0f-hA-hfk" firstAttribute="centerY" secondItem="kBy-lS-blW" secondAttribute="centerY" id="tiK-Dx-Jvp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xKG-ge-cOR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipe" image="icons8-restaurant-menu-30" id="9KE-ej-8qo"/>
                     <connections>
+                        <outlet property="loader" destination="F0f-hA-hfk" id="lER-xv-Zw4"/>
                         <outlet property="recipeTableView" destination="r4b-7E-SXQ" id="Yo3-P8-y06"/>
                     </connections>
                 </viewController>
