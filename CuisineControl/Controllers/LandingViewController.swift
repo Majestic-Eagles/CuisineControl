@@ -23,13 +23,12 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         set_up()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 1, animations: {
             self.buttonsView.transform = CGAffineTransform(translationX: 0, y: -200)
         })
-        
- 
-        
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destinationViewController = segue.destination
