@@ -71,6 +71,8 @@ The following **stretch** features are implemented:
 
 ## Video Walkthrough
 
+https://www.youtube.com/watch?v=wjhPynNv1hs
+
 Here's a walkthrough of implemented user stories:
 
 <img src='https://image.ibb.co/eJwEfq/cusine-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
