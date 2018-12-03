@@ -18,7 +18,6 @@ class Food{
     var protein: Int?
     var carbohydrates: Int?
     var fat: Int?
-    var isPresent: Bool?
     var expirationDate: String? //Entered by user when food is created
     
     init(dictionary: [String: Any], name: String, expirationDate: String, isIngredient: Int) {

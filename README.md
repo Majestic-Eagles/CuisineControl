@@ -2,42 +2,40 @@
 
 **CuisineControl** is an app that scans food items in order to store their expiration dates.  In addition, CuisineControl can keep track of what foods one has and use that information to generate a random recipe for the person to use.  CuisineControl can also specify these recipes, for example limiting the recipes to "Mexican" recipes or by limiting which ingredients that the person has.
 
-Time spent: **35** hours spent in total
+Time spent: **127** hours spent in total
 
 ## Parse and Api's
 **Parse**
 Our parse server will be able to hold users, which will have a username, password, then maybe a pointer to a list of recipes they liked. Not sure if a list is the most efficient but it will get the job done. We're thinking that will also need a pointer to the ingreidients that user has.
 
-**Api's**
+**API's**
 We'll probably be using an api called **Edamam** for searching food recipes. We choice this becuase it's free to use and they have a large data base of recipes.
 
-The models we will probably use are:
+The models we used are:
 
 User: to store basic user info and the ingredients they have.
 
-Food:
+Food (This model respresents a food object added by the user)
 Class Food
  * Name
+ * API name
  * Serving size
  * Calories
  * Protein
  * Fat
  * Carbohyrdates
- * IsPresent (A boolean variable that says whether or not a person has it)
+ * Expiration Date
  
-Recipe:
+Recipe (This model represents a recipe that the API will find based on the user information)
 Class Recipe
-* Ingredients (An array of Food objects)
+* Ingredients
 * Name
-* Description
-* FoodImage
+* Recipe Image URL
+* Recipe URL
 * Calories 
 * Protein
 * Fat
 * Carbohydrates
-* Instructions (Likely a string containing the instructions that the user will read to prepare the recipe)
-* IsAvailable (Whether or not the user has the foods necessary to prepare the recipe)
-* IsMissing (An array of food objects that the user needs to finish the recipe)
 * CookTime
 
 ## Wireframe
@@ -92,6 +90,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+- Edamam API
+- Parse API
+- Timothy Lee
 
 
 ## Notes
@@ -100,7 +101,8 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Taylor McLaughlin]
+Copyright [2018] [Ryan McCommon]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

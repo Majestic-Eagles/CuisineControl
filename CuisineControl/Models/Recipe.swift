@@ -19,9 +19,6 @@ class Recipe {
     var protein: NSNumber
     var fat: NSNumber
     var carbohydrates: NSNumber
-    var instructions: String!
-    //var isAvailable: Bool!
-    //var isMissing: [Food]?
     var cookTime: NSNumber
     
     init(dictionary: [String: Any]) {
