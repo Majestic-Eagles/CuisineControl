@@ -20,6 +20,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loader.alpha = 0
         makePretty()
         loader.transform = CGAffineTransform(scaleX: 3, y: 3)
     }
@@ -38,10 +39,12 @@ class CreateAccountViewController: UIViewController {
     }
 
     @IBAction func signUp(_ sender: Any) {
+        loader.alpha = 1
         loader.startAnimating()
         let newUser = PFUser()
         if(nameField.text! == "" || passwordField.text! == "" || emailField.text! == ""){
             loader.stopAnimating()
+            loader.alpha = 0
             let misingInputalert = UIAlertController(title: "Missing Input", message: "Username or password is empty", preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in }
             misingInputalert.addAction(OKAction)
@@ -57,6 +60,7 @@ class CreateAccountViewController: UIViewController {
             newUser.signUpInBackground { (success: Bool, error: Error?) in
                 if let error = error {
                     self.loader.stopAnimating()
+                    self.loader.alpha = 0
                     let errorAlert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle: .alert)
                     let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
                         
@@ -67,6 +71,7 @@ class CreateAccountViewController: UIViewController {
                 } else {
                     print("User Registered successfully")
                     self.loader.stopAnimating()
+                    self.loader.alpha = 0
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                     // manually segue to logged in view
                 }
