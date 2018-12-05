@@ -1,15 +1,15 @@
 # Group Project 'CuisineControl'
 
-**CuisineControl** is an app that scans food items in order to store their expiration dates.  In addition, CuisineControl can keep track of what foods one has and use that information to generate a random recipe for the person to use.  CuisineControl can also specify these recipes, for example limiting the recipes to "Mexican" recipes or by limiting which ingredients that the person has.
+**CuisineControl** is an app that keeps track of the expiration dates of all the foods a person has.  It solves the problem of throughing out food that is expired by allowing people to easily add foods by scanning their barcodes.  It also searches for random recipes based on the food the person has, allowing them to enjoy new exciting recipes.
 
 Time spent: **127** hours spent in total
 
-## Parse and Api's
+## Backend
 **Parse**
 Our parse server will be able to hold users, which will have a username, password, then maybe a pointer to a list of recipes they liked. Not sure if a list is the most efficient but it will get the job done. We're thinking that will also need a pointer to the ingreidients that user has.
 
 **API's**
-We'll probably be using an api called **Edamam** for searching food recipes. We choice this becuase it's free to use and they have a large data base of recipes.
+We used two different API's, both made by Edamam.  We used their food database API's to lookup the information of a food from a barcode.  We also used their recipe search API to lookup recipes based on the food items the user has.
 
 The models we used are:
 
@@ -97,7 +97,13 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Frontend problems:
+
+One challenge I faced with UI was implemented UIScrollView in a couple of the views, once I figured out how to do so it was pretty easy, but I had trouble with correctly adding constraints.  
+
+Backend problems
+
+One of the biggest challenges in building the app was selecting and implementing the correct API.  I searched through documentation of at least 10 API's in an attempt to find the perfect one for my situation (that was also free).  In the end I didn't really find something that had everything I wanted, but I ended up choosing the Edamam API because it had a very good database for barcodes, as well as a good recipe search.  The compromise was that I wasn't able to search for foods quite how I wanted to using the API.
 
 ## License
 
