@@ -69,11 +69,12 @@ Features we want to include in the **Future**
 - [ ] User can keep certain foods out of the recipe, i.e. remove eggs from potential random recipes even though the user has eggs
 - [ ] User  can add their own recipes to the random recipe generator
 
-## Video Walkthrough
+
 
 ## **This is a promotional video of our app**
 https://www.youtube.com/watch?v=wjhPynNv1hs
 
+## Animated Walkthrough
 Here's a walkthrough of implemented user stories:
 
 <img src='./gif1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
