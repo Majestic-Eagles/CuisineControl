@@ -90,7 +90,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 - Timothy Lee (Fade Transistion)
 
 
-## Notes
+## Taylor's Notes
 
 Frontend problems:
 
@@ -99,6 +99,11 @@ One challenge I faced with UI was implemented UIScrollView in a couple of the vi
 Backend problems
 
 One of the biggest challenges in building the app was selecting and implementing the correct API.  I searched through documentation of at least 10 API's in an attempt to find the perfect one for my situation (that was also free).  In the end I didn't really find something that had everything I wanted, but I ended up choosing the Edamam API because it had a very good database for barcodes, as well as a good recipe search.  The compromise was that I wasn't able to search for foods quite how I wanted to using the API.
+
+## Ryan's Notes
+
+**General Problems:**
+Most of my struggles were with the frontend of the app. The biggest being swipe to delete, I didn't realize that this functionality was easy to implement once you know how to do it. The next problem was with getting the sign in and create account button to pop up when the app loaded. Taylor couldn't figure out so he told me to try it and all I did different from him was putting the buttons into a view and animating the view instead of the buttons.
 
 ## License
 
