@@ -71,16 +71,13 @@ Features we want to include in the **Future**
 
 ## Video Walkthrough
 
+## **This is a promotional video of our app**
 https://www.youtube.com/watch?v=wjhPynNv1hs
 
 Here's a walkthrough of implemented user stories:
 
-
-
-*Most up to date Gif*<br>
 <img src='./gif1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='./gif2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Credits
 
