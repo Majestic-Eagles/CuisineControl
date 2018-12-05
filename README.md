@@ -47,7 +47,7 @@ It gives a general idea of how we are going to lay things out.
 
 ## User Stories
 
-The following **required** functionality is completed:
+The following functionality is completed:
 - [X] User can sign up and log in
 - [X] User gets an error if account is invalid or taken
 - [X] User persists
@@ -59,26 +59,21 @@ The following **required** functionality is completed:
 - [X] User can can see what foods they have
 - [X] User can delete a food from their food list (also deletes food from Parse)
 
-The following **stretch** features are implemented:
+The following **Challenge** features are implemented:
 - [X] User is greeted with a pretty login/signup screen
 - [X] User can add foods manually
 - [X] Login/signup screens have activity indicators.
+
+Features we want to include in the **Future**
 - [ ] User can specify what type of recipe they want, i.e. Mexican or Thai
 - [ ] User can keep certain foods out of the recipe, i.e. remove eggs from potential random recipes even though the user has eggs
-- [ ] User add recipes to the random recipe generator
+- [ ] User  can add their own recipes to the random recipe generator
 
 ## Video Walkthrough
 
 https://www.youtube.com/watch?v=wjhPynNv1hs
 
 Here's a walkthrough of implemented user stories:
-
-<img src='https://image.ibb.co/eJwEfq/cusine-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://imgur.com/1rODnqd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://imgur.com/WGdqrwz.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://imgur.com/bXI4mVF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://imgur.com/kk5FF0D.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://image.ibb.co/iHTQLA/CCRemake.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 *Most up to date Gif*<br>
 <img src='https://i.ibb.co/ySyzWf3/CCFinal.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
@@ -92,7 +87,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 - Edamam API
 - Parse API
-- Timothy Lee
+- Timothy Lee (Fade Transistion)
 
 
 ## Notes
