@@ -75,13 +75,10 @@ https://www.youtube.com/watch?v=wjhPynNv1hs
 
 Here's a walkthrough of implemented user stories:
 
-<video width="310" height="530" controls>
-  <source src="Rec1.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
 
 *Most up to date Gif*<br>
-<img src='https://i.ibb.co/ySyzWf3/CCFinal.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./gif1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
